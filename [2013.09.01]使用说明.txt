@@ -1,0 +1,34 @@
+1、到网站注册，并申请微信APP：
+网站内测入口：http://www.souidea.com
+后台微信APP管理页面（注册、登陆后打开）：http://www.souidea.com/User/WeixinApp
+
+2、申请成功后，进入微信App编辑页面，可以看到AppKey及Secret（新获得内测权限的账户，请在收到邮件后半小时内完成申请及第一次连接）
+
+3、打开Senparc.Weixin.MP.P2PSDK.BuildOutPut\Senparc.Weixin.MP.P2PSDK.TestTools.exe，填入AppKey及Secret，点击唯一的按钮，成功之后，点击【链接】，若连接成功，可以发送消息测试。
+
+4、App申请成功后（拿到源代码后），请按照要求绑定一下P2PBridge.ashx（建议复制到网站根目录，并上传3个关键dll到bin文件夹下），P2PBridge.ashx用于接收fakeid-openid关系等绑定推送信息。
+
+
+
+说明：源代码中的Senparc.Weixin.MP.dll，就是开源SDK的dll：https://github.com/JeffreySu/WeiXinMPSDK，尽量保证最新的，可以通过文件属性的版本号对比。
+如果源代码有更新，大家可以用最新的Senparc.Weixin.MP.dll替换，我会尽量保证向下兼容。不放心的话可以放到一起编译一下：）
+
+
+[2013.08.15] 在2013.08.12的基础上优化执行代码。
+
+[2013.08.17] 内测进入最后阶段，API使用新地址：http://api.souidea.com:8282，旧地址将于24小时后停用。
+
+[2013.08.20] 本次更新了P2P返回结果的枚举类型，以及音频获取方式。并且优化了P2P服务端程序。
+
+[2013.08.24] 针对微信后台改版进行了更新，同时优化了用户组的信息，并丰富了一些消息返回错误类型。
+
+[2013.08.31] 本次更新主要提供了多账号同时登陆管理的功能，具体请见Demo源代码。如果有任何问题，可以直接回复邮件到498977166@qq.com
+
+[2013.09.01] 更新了测试工具，优化P2PSDK代码。
+
+如果大家发现任何问题，欢迎及时向我反馈。
+
+感谢！
+
+
+苏震巍

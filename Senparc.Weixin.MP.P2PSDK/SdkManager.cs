@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Senparc.Weixin.MP.P2PSDK
+{
+    using Senparc.Weixin.MP;
+    using Senparc.Weixin.MP.P2PSDK.Common;
+
+    public class SdkManager
+    {
+        public const string DEFAULT_URL = "http://weixinp2p.senparc.com:8282";//默认P2P Url地址
+
+        //private static string _appKey;
+        //private static string _secret;
+        private static PassportCollection _passportCollection;
+        public static PassportCollection PassportCollection
+        {
+            get
+            {
+                if (_passportCollection == null)
+                {
+                    //LoadPassport();
+                    _passportCollection = new PassportCollection();
+                }
+                return _passportCollection;
+            }
+            set { _passportCollection = value; }
+        }
+
+        public static PassportBag GetPassportBag(string appKey)
+        {
+            if (PassportCollection.ContainsKey(appKey))
+            {
+                return PassportCollection[appKey];
+            }
+            return null;
+        }
+
+        public const string ApiPath = "/P2P/";
+
+        /// <summary>
+        /// 注册P2P应用基本信息（可以选择不立即载入Passport以节省系统启动时间）
+        /// </summary>
+        /// <param name="appKey">P2P后台申请到微信应用后的AppKey</param>
+        /// <param name="secret">AppKey对应的Secret</param>
+        /// <param name="url">API地址，建议使用默认值</param>
+        /// <param name="getPassportImmediately">是否马上获取Passport，默认为False</param>
+        private static void Register(string appKey, string secret, string url = DEFAULT_URL, bool getPassportImmediately = false)
+        {
+            if (PassportCollection.Url != url)
+            {
+                PassportCollection.Url = url + ApiPath;
+            }
+
+            PassportCollection[appKey] = new PassportBag(appKey, secret, url + ApiPath);
+            if (getPassportImmediately)
+            {
+                ApplyPassport(appKey, secret, url);
+            }
+        }
+
+        /// <summary>
+        /// 申请新的通行证。
+        /// 每次调用完毕前将有1秒左右的Thread.Sleep时间
+        /// </summary>
+        public static void ApplyPassport(string appKey, string appSecret, string url = DEFAULT_URL)
+        {
+            if (!PassportCollection.ContainsKey(appKey))
+            {
+                //如果不存在，则自动注册（注册之后PassportCollection[appKey]一定有存在值）
+                Register(appKey, appSecret, url, true);
+            }
+
+            var passportBag = PassportCollection[appKey];
+
+            var getPassportUrl = PassportCollection.Url + "GetPassport";
+            var formData = new Dictionary<string, string>();
+            formData["appKey"] = passportBag.AppKey;
+            formData["secret"] = passportBag.AppSecret;
+            var result = HttpUtility.Post.PostGetJson<PassportResult>(getPassportUrl, formData: formData);
+            if (result.Result != P2PResultKind.成功)
+            {
+                throw new WeixinException("获取Passort失败！错误信息：" + result.Result, null);
+            }
+
+            passportBag.Passport = result.Data as Passport;
+            passportBag.Passport.Url = PassportCollection.Url;
+
+            //为了更加贴近真是登陆，并且防止502等页面错误产生，这里适当添加一些间隔时间
+            Thread.Sleep(1000);
+        }
+
+        /// <summary>
+        /// 清除当前的通行证
+        /// </summary>
+        public static void RemovePassport(string appKey)
+        {
+            try
+            {
+                PassportCollection.Remove(appKey);
+            }
+            catch
+            {
+            }
+        }
+
+        /// <summary>
+        /// 获取appKey对应的接口集合。
+        /// 调用此方法请确认此appKey已经成功使用SdkManager.Register(appKey, appSecret, appUrl)方法注册过。
+        /// </summary>
+        /// <param name="appKey"></param>
+        /// <returns></returns>
+        public static ApiContainer GetApiContainer(string appKey, string appSecret, string url = DEFAULT_URL)
+        {
+            return new ApiContainer(appKey, appSecret, url);
+        }
+    }
+}
