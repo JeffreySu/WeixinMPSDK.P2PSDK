@@ -25,6 +25,15 @@ Senparc.Weixin.MP.dll 开源项目地址：https://github.com/JeffreySu/WeiXinMP
 
 Windows客户端测试工具位置：/Senparc.Weixin.MP.P2PSDK.BuildOutPut/Senparc.Weixin.MP.P2PSDK.TestTools.exe
 
+使用Nuget安装到项目中
+--------------
+地址：https://www.nuget.org/packages/Senparc.Weixin.MP.P2P
+
+命令：
+```
+PM> Install-Package Senparc.Weixin.MP.P2P
+```
+
 
 功能介绍
 =====================
