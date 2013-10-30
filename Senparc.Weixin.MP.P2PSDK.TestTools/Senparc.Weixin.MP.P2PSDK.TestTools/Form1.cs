@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Senparc.Weixin.MP.Entities;
+using Senparc.Weixin.MP.Helpers;
 using Senparc.Weixin.MP.HttpUtility;
 using Senparc.Weixin.MP.P2PSDK.Common;
 
@@ -185,7 +186,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
              * 说明：FriendApi.GetGroupIds()这个例子用于返回所有的用户组Id
              * “未分组”的groupId为0，通常可以在这个组中取前x位，获取新用户的信息
              */
-var result = GetApiContainer.FriendApi.GetGroupIds();//TODO:下一版本中可能更名为GetGroups
+            var result = GetApiContainer.FriendApi.GetGroupIds();//TODO:下一版本中可能更名为GetGroups
 
             //TODO:此处可以额外判断结果类型，参考btnSendMessageSend_Click
             var groupDataList = result.Data.GroupDataList;
@@ -253,7 +254,7 @@ var result = GetApiContainer.FriendApi.GetGroupIds();//TODO:下一版本中可�
             //获取用户详细信息，用于获取用户名
             var fakeid = cbFriendsList.SelectedValue.ToString();
             var detailsResult = GetApiContainer.FriendApi.GetFriendsDetails(new[] { long.Parse(cbFriendsList.SelectedValue.ToString()) });
-            txtSendMessageUserName.Text = detailsResult.Data.WeixinUserInfoList[0].Username;
+            txtSendMessageUserName.Text = detailsResult.Data.WeixinUserInfoList[0].contact_info.user_name;
             txtFakeidBindFakeid.Text = fakeid;
             txtMediaFakeid.Text = fakeid;
             txtSendNewsMessageFakeid.Text = fakeid;
@@ -284,23 +285,23 @@ var result = GetApiContainer.FriendApi.GetGroupIds();//TODO:下一版本中可�
 
                 var headImageFilename = Path.Combine("HeadImages", fakeid + ".jpg");
                 DownloadHeadImage(fakeid, headImageFilename);//下载并保存头像
-
+                var contactInfo = weixinUserInfo.contact_info;
                 string msg = string.Format(
-@"FakeId：{0}
-GroupId:{1}
-NickName:{2}
-ReMarkName：{3}
-Sex：{4}
-Username：{5}
-Country：{6}
-Province：{7}
-City：{8}
-Signature：{9}
+@"fake_id：{0}
+group_id:{1}
+nick_name:{2}
+remark_name：{3}
+gender：{4}
+user_name：{5}
+country：{6}
+province：{7}
+city：{8}
+signature：{9}
 
 用户头像已经保存到：{10}
 "
-, weixinUserInfo.FakeId, weixinUserInfo.GroupID, weixinUserInfo.NickName, weixinUserInfo.ReMarkName, weixinUserInfo.Sex,
-weixinUserInfo.Username, weixinUserInfo.Country, weixinUserInfo.Province, weixinUserInfo.City, weixinUserInfo.Signature,
+, contactInfo.fake_id, contactInfo.group_id, contactInfo.nick_name, contactInfo.remark_name, contactInfo.gender,
+contactInfo.user_name, contactInfo.country, contactInfo.province, contactInfo.city, contactInfo.signature,
 headImageFilename);
 
                 MessageBox.Show(msg);
@@ -368,20 +369,27 @@ headImageFilename);
                 });
             }
 
-            MessageBox.Show("本次测试会发送2条信息，第一条为新信息，发送到username，并生成appMsgId，第二条为通过这个appMsgId推送到fakeid。");
+            MessageBox.Show("1、AppMsgId为空的情况下，本次测试会发送2条信息，第一条为新信息，发送到username，并生成appMsgId，第二条为通过这个appMsgId推送到fakeid。\r\n2、AppMsgId不为空的情况下，将会直接发送此图文素材（请确保参数正确）！");
 
-            var result = GetApiContainer.MessageApi.SendMessage(usernames, articles);
-            //TODO:此处可以额外判断结果类型，参考btnSendMessageSend_Click
+            var appMegId = txtNewsAppMsgId.Text;
+            var success = true;
+            if (string.IsNullOrEmpty(appMegId))
+            {
+                var result = GetApiContainer.MessageApi.SendMessage(usernames, articles);
+                //TODO:此处可以额外判断结果类型，参考btnSendMessageSend_Click
 
-            var firstSendNewMessageResult = result.Data.PostMessageResults[0];//每一个username都会按照次序有一条发送结果。
-            var success = firstSendNewMessageResult.msg.Contains("success");
-            MessageBox.Show("第一条发送结果：" + firstSendNewMessageResult.msg + "\r\n" +
-                (success ? "现在开始发送第二条" : "有错误发生，第二条将停止发送"));
+                var firstSendNewMessageResult = result.Data.PostMessageResults[0];//每一个username都会按照次序有一条发送结果。
+                 success = firstSendNewMessageResult.msg.Contains("success");
+                MessageBox.Show("第一条发送结果：" + firstSendNewMessageResult.msg + "\r\n" +
+                    (success ? "现在开始发送第二条" : "有错误发生，第二条将停止发送"));
 
+                txtNewsAppMsgId.Text = firstSendNewMessageResult.appMsgId == "0" ? null : firstSendNewMessageResult.appMsgId;
+            }
+            
             if (success)
             {
                 var sendMessageResult = GetApiContainer.MessageApi.SendMessage(
-                    long.Parse(txtSendNewsMessageFakeid.Text), long.Parse(firstSendNewMessageResult.appMsgId));
+                    long.Parse(txtSendNewsMessageFakeid.Text), long.Parse(txtNewsAppMsgId.Text));
                 MessageBox.Show("第二条发送结果：" + sendMessageResult.Result);
             }
         }
@@ -410,15 +418,15 @@ headImageFilename);
             }
 
             var openId = "JeffreySu";//这里的Openid只能随便假设一个，实际微信请求到达的时候，可以得到真实的OpenId，即RequestMessage.FromUserName
-var keyword = "【" + Guid.NewGuid().ToString("n").Substring(0, 4) + "】";//这里可以随机产生一个序列，保证不会出现重复即可
+            var keyword = "【" + Guid.NewGuid().ToString("n").Substring(0, 4) + "】";//这里可以随机产生一个序列，保证不会出现重复即可
 
-//进行绑定请求，结果会发送到P2PBridge接口（如P2PBridge.ashx），所以调用之前请确认P2P后台的P2PBridge接口已经成功添加。
-var result = GetApiContainer.FriendApi.BindFakeidOpenid(openId, keyword);
-if (result.Result != P2PResultKind.成功)
-{
-    MessageBox.Show("请求出错：" + result.Result);
-    return;
-}
+            //进行绑定请求，结果会发送到P2PBridge接口（如P2PBridge.ashx），所以调用之前请确认P2P后台的P2PBridge接口已经成功添加。
+            var result = GetApiContainer.FriendApi.BindFakeidOpenid(openId, keyword);
+            if (result.Result != P2PResultKind.成功)
+            {
+                MessageBox.Show("请求出错：" + result.Result);
+                return;
+            }
 
 
             /*

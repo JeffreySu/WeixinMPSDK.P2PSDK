@@ -61,6 +61,8 @@
             this.cbGroupIds = new System.Windows.Forms.ComboBox();
             this.btnGetGroupIds = new System.Windows.Forms.Button();
             this.gbSendMessageNews = new System.Windows.Forms.GroupBox();
+            this.txtSendNewsMessageFakeid = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.gbFakeidBind = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnFakeIdBind = new System.Windows.Forms.Button();
@@ -79,8 +81,8 @@
             this.lblAppKeyNotice = new System.Windows.Forms.Label();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.txtAppKey = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtSendNewsMessageFakeid = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtNewsAppMsgId = new System.Windows.Forms.TextBox();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
@@ -416,9 +418,11 @@
             // 
             // gbSendMessageNews
             // 
+            this.gbSendMessageNews.Controls.Add(this.label18);
             this.gbSendMessageNews.Controls.Add(this.txtSendMessageDescription);
             this.gbSendMessageNews.Controls.Add(this.btnSendMessageNews);
             this.gbSendMessageNews.Controls.Add(this.label9);
+            this.gbSendMessageNews.Controls.Add(this.txtNewsAppMsgId);
             this.gbSendMessageNews.Controls.Add(this.txtSendNewsMessageFakeid);
             this.gbSendMessageNews.Controls.Add(this.txtSendMessageUserName);
             this.gbSendMessageNews.Controls.Add(this.label17);
@@ -434,6 +438,23 @@
             this.gbSendMessageNews.TabStop = false;
             this.gbSendMessageNews.Text = "图文消息测试";
             this.gbSendMessageNews.Visible = false;
+            // 
+            // txtSendNewsMessageFakeid
+            // 
+            this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(302, 22);
+            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendNewsMessageFakeid.Name = "txtSendNewsMessageFakeid";
+            this.txtSendNewsMessageFakeid.Size = new System.Drawing.Size(120, 25);
+            this.txtSendNewsMessageFakeid.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(226, 26);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 15);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "fakeid：";
             // 
             // gbFakeidBind
             // 
@@ -624,22 +645,22 @@
             this.txtAppKey.Size = new System.Drawing.Size(292, 23);
             this.txtAppKey.TabIndex = 18;
             // 
-            // label17
+            // label18
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(226, 26);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 15);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "fakeid：";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(428, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(86, 15);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "AppMsgId：";
             // 
-            // txtSendNewsMessageFakeid
+            // txtNewsAppMsgId
             // 
-            this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(302, 22);
-            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSendNewsMessageFakeid.Name = "txtSendNewsMessageFakeid";
-            this.txtSendNewsMessageFakeid.Size = new System.Drawing.Size(120, 25);
-            this.txtSendNewsMessageFakeid.TabIndex = 1;
+            this.txtNewsAppMsgId.Location = new System.Drawing.Point(517, 22);
+            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewsAppMsgId.Name = "txtNewsAppMsgId";
+            this.txtNewsAppMsgId.Size = new System.Drawing.Size(120, 25);
+            this.txtNewsAppMsgId.TabIndex = 1;
             // 
             // Form1
             // 
@@ -667,7 +688,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v2013.10.15 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2013.10.30 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
@@ -742,6 +763,8 @@
         private System.Windows.Forms.ComboBox txtAppKey;
         private System.Windows.Forms.TextBox txtSendNewsMessageFakeid;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtNewsAppMsgId;
     }
 }
 

@@ -74,6 +74,8 @@
     <Compile Include="Entities\P2PResult\P2PBridgeCallbackResult.cs" />
     <Compile Include="Entities\Passport.cs" />
     <Compile Include="Utility\StreamUtility.cs" />
+    <Compile Include="WeixinServerResult\BaseResp.cs" />
+    <Compile Include="WeixinServerResult\ContactInfo.cs" />
     <Compile Include="WeixinServerResult\FriendsJsonData.cs" />
     <Compile Include="WeixinServerResult\GroupData.cs" />
     <Compile Include="WeixinServerResult\WeixinUserInfoJson.cs" />
