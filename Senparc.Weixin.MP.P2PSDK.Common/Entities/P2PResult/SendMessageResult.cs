@@ -31,7 +31,7 @@ namespace Senparc.Weixin.MP.P2PSDK.Common
 
         public SendMessageNewsData()
         {
-            PostMessageResults=new List<PostMessageResult>();
+            PostMessageResults = new List<PostMessageResult>();
         }
     }
 }

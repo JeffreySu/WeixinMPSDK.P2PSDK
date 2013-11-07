@@ -11,7 +11,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
     public class SdkManager
     {
-        public const string DEFAULT_URL = "http://weixinp2p.senparc.com:8282";//默认P2P Url地址
+        public const string DEFAULT_URL = "http://api.souidea.com:8282";//默认P2P Url地址
 
         //private static string _appKey;
         //private static string _secret;

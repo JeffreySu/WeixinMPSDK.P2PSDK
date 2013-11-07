@@ -9,7 +9,7 @@ namespace Senparc.Weixin.MP.P2PSDK
     public class PassportCollection : Dictionary<string, PassportBag>
     {
         /// <summary>
-        /// 统一URL前缀，如http://weixinp2p.senparc.com:8282/P2P/
+        /// 统一URL前缀，如http://api.souidea.com:8282/P2P/
         /// </summary>
         public string Url { get; set; }
         public PassportCollection()
