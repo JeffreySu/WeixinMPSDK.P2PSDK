@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senparc.Weixin.MP.P2PSDK.TestTools", "Senparc.Weixin.MP.P2PSDK.TestTools.csproj", "{24D4E59E-EB12-465B-BBF7-B4CC7093F73D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senparc.Weixin.MP.P2PSDK.Common", "..\..\Senparc.Weixin.MP.P2PSDK.Common\Senparc.Weixin.MP.P2PSDK.Common.csproj", "{727708EA-729D-44E0-94CE-972FE1EC1EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senparc.Weixin.MP.P2PSDK", "..\..\Senparc.Weixin.MP.P2PSDK\Senparc.Weixin.MP.P2PSDK.csproj", "{65BEC653-2AEF-4008-867C-2FAE21158112}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24D4E59E-EB12-465B-BBF7-B4CC7093F73D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D4E59E-EB12-465B-BBF7-B4CC7093F73D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D4E59E-EB12-465B-BBF7-B4CC7093F73D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D4E59E-EB12-465B-BBF7-B4CC7093F73D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727708EA-729D-44E0-94CE-972FE1EC1EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727708EA-729D-44E0-94CE-972FE1EC1EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727708EA-729D-44E0-94CE-972FE1EC1EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727708EA-729D-44E0-94CE-972FE1EC1EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BEC653-2AEF-4008-867C-2FAE21158112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BEC653-2AEF-4008-867C-2FAE21158112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BEC653-2AEF-4008-867C-2FAE21158112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BEC653-2AEF-4008-867C-2FAE21158112}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

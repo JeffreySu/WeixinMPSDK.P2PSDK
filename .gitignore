@@ -215,6 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 .svn
-*.sln
 *.suo
 *.user
