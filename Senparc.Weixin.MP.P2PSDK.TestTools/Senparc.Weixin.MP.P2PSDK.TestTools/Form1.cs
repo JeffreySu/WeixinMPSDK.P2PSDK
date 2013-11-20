@@ -115,7 +115,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
             initSuccessed = GetApiContainer.Passport.Token != null;
             CheckGroupBoxVisible();
 
-            if (initSuccessed)
+            if (initSuccessed && !txtAppKey.Items.Contains(txtAppKey.Text))
             {
                 txtAppKey.Items.Add(txtAppKey.Text);
             }
@@ -343,6 +343,13 @@ headImageFilename);
 
         private void btnSendMessageNews_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtSendMessageUserName.Text))
+            {
+                MessageBox.Show(
+                    "请输入用户名！\r\n注意：从2013年11月20日起，微信后台不再显示用户名，因此无法得到用户名去用“预览”的形式发送图文信息。\r\n您可以在这里输入固定的用户名（如自己的），发送成功后，用得到的AppMsgId，推送到对方的fakeid(s)，而不是username(s)。");
+                return;
+            }
+
             /*
              * 说明：MessageApi.SendMessage()用于发送图文信息
              * 调用接口时，同一次传入的远程图片，将自动加为素材，并用同一个ID的图片素材发送。

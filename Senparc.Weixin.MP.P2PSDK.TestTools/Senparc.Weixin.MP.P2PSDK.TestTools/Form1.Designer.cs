@@ -61,6 +61,8 @@
             this.cbGroupIds = new System.Windows.Forms.ComboBox();
             this.btnGetGroupIds = new System.Windows.Forms.Button();
             this.gbSendMessageNews = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtNewsAppMsgId = new System.Windows.Forms.TextBox();
             this.txtSendNewsMessageFakeid = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gbFakeidBind = new System.Windows.Forms.GroupBox();
@@ -81,8 +83,6 @@
             this.lblAppKeyNotice = new System.Windows.Forms.Label();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.txtAppKey = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtNewsAppMsgId = new System.Windows.Forms.TextBox();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
@@ -439,6 +439,23 @@
             this.gbSendMessageNews.Text = "图文消息测试";
             this.gbSendMessageNews.Visible = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(428, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(86, 15);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "AppMsgId：";
+            // 
+            // txtNewsAppMsgId
+            // 
+            this.txtNewsAppMsgId.Location = new System.Drawing.Point(517, 22);
+            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewsAppMsgId.Name = "txtNewsAppMsgId";
+            this.txtNewsAppMsgId.Size = new System.Drawing.Size(120, 25);
+            this.txtNewsAppMsgId.TabIndex = 1;
+            // 
             // txtSendNewsMessageFakeid
             // 
             this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(302, 22);
@@ -645,23 +662,6 @@
             this.txtAppKey.Size = new System.Drawing.Size(292, 23);
             this.txtAppKey.TabIndex = 18;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(428, 26);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(86, 15);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "AppMsgId：";
-            // 
-            // txtNewsAppMsgId
-            // 
-            this.txtNewsAppMsgId.Location = new System.Drawing.Point(517, 22);
-            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNewsAppMsgId.Name = "txtNewsAppMsgId";
-            this.txtNewsAppMsgId.Size = new System.Drawing.Size(120, 25);
-            this.txtNewsAppMsgId.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -688,7 +688,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v2013.10.30 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2013.11.20 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
