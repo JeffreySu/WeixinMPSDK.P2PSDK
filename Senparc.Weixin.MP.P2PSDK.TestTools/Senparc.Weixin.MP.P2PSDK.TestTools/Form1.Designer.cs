@@ -688,7 +688,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v2013.11.22 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2013.11.24 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();

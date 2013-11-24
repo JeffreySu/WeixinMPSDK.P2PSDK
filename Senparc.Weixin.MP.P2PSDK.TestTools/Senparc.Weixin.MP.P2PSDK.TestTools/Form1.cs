@@ -427,8 +427,13 @@ headImageFilename);
             var openId = "JeffreySu";//这里的Openid只能随便假设一个，实际微信请求到达的时候，可以得到真实的OpenId，即RequestMessage.FromUserName
             var keyword = "【" + Guid.NewGuid().ToString("n").Substring(0, 4) + "】";//这里可以随机产生一个序列，保证不会出现重复即可
 
-            //进行绑定请求，结果会发送到P2PBridge接口（如P2PBridge.ashx），所以调用之前请确认P2P后台的P2PBridge接口已经成功添加。
-            var result = GetApiContainer.FriendApi.BindFakeidOpenid(openId, keyword);
+            /* 进行绑定请求，结果会发送到P2PBridge接口（如P2PBridge.ashx），所以调用之前请确认P2P后台的P2PBridge接口已经成功添加。
+             * 
+             * 下面的p2pBridgeUrl如果为空，则使用www.souidea.com后台设置的P2PUrl，无论使用哪一个，都共用后台的P2PBridge Token，所以后台必须有一个可用的Url验证通过。
+             * 当p2pBridgeUrl为空的时候，也可以不传入，这里仅作为演示。
+             */
+            string p2pBridgeUrl = null;//如http://xxx.com/OtherBridgeUrl
+            var result = GetApiContainer.FriendApi.BindFakeidOpenid(openId, keyword, p2pBridgeUrl);
             if (result.Result != P2PResultKind.成功)
             {
                 MessageBox.Show("请求出错：" + result.Result);

@@ -76,16 +76,19 @@ namespace Senparc.Weixin.MP.P2PSDK
             return result;
         }
 
-        private NormalP2PResult BindFakeidOpenidFunc(string openid, string keyword)
+        private NormalP2PResult BindFakeidOpenidFunc(string openid, string keyword, string p2pBridgeUrl = null)
         {
             var url = _passport.Url + "BindFakeidOpenid";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["openid"] = HttpUtility.RequestUtility.UrlEncode(openid);
             formData["keyword"] = HttpUtility.RequestUtility.UrlEncode(keyword);
+            if (!string.IsNullOrEmpty(p2pBridgeUrl))
+            {
+                formData["p2pBridgeUrl"] = HttpUtility.RequestUtility.UrlEncode(p2pBridgeUrl);
+            }
             var result = HttpUtility.Post.PostGetJson<NormalP2PResult>(url, formData: formData);
             return result;
-
         }
 
         /// <summary>
@@ -145,10 +148,11 @@ namespace Senparc.Weixin.MP.P2PSDK
         /// </summary>
         /// <param name="openid"></param>
         /// <param name="keyword"></param>
+        /// <param name="p2pBridgeUrl">如果为空，则使用www.souidea.com后台设置的P2PUrl，无论使用哪一个，都共用后台的P2PBridge Token，所以后台必须有一个可用的Url验证通过</param>
         /// <returns></returns>
-        public NormalP2PResult BindFakeidOpenid(string openid, string keyword)
+        public NormalP2PResult BindFakeidOpenid(string openid, string keyword, string p2pBridgeUrl = null)
         {
-            return ApiConnection.Connection(() => BindFakeidOpenidFunc(openid, keyword)) as NormalP2PResult;
+            return ApiConnection.Connection(() => BindFakeidOpenidFunc(openid, keyword, p2pBridgeUrl)) as NormalP2PResult;
         }
     }
 }
