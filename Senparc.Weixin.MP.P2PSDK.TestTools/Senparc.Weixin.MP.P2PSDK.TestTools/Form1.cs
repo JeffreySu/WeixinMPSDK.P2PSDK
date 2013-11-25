@@ -386,13 +386,13 @@ headImageFilename);
                 //TODO:此处可以额外判断结果类型，参考btnSendMessageSend_Click
 
                 var firstSendNewMessageResult = result.Data.PostMessageResults[0];//每一个username都会按照次序有一条发送结果。
-                 success = firstSendNewMessageResult.msg.Contains("success");
+                success = firstSendNewMessageResult.msg.Contains("success");
                 MessageBox.Show("第一条发送结果：" + firstSendNewMessageResult.msg + "\r\n" +
                     (success ? "现在开始发送第二条" : "有错误发生，第二条将停止发送"));
 
                 txtNewsAppMsgId.Text = firstSendNewMessageResult.appMsgId == "0" ? null : firstSendNewMessageResult.appMsgId;
             }
-            
+
             if (success)
             {
                 var sendMessageResult = GetApiContainer.MessageApi.SendMessage(
