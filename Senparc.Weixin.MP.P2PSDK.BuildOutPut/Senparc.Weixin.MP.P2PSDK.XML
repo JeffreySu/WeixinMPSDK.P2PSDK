@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.Weixin.MP.P2PSDK</name>
+    </assembly>
+    <members>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.BaseApi">
+            <summary>
+            API调用类基类
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.ApiConnection.Connection``1(System.Func{Senparc.Weixin.MP.P2PSDK.Common.IP2PResult{``0}})">
+            <summary>
+            自动更新Passport的链接方法
+            </summary>
+            <param name="apiFunc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.GetGroupIds">
+            <summary>
+            获取所有分组ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.GetGroupFriends(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取某一分组下的用户信息，支持分页
+            </summary>
+            <param name="groupId"></param>
+            <param name="pageSize">最大500，建议值：50～100</param>
+            <param name="pageIndex">0为第1页</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.GetFriends(System.String,System.Int32)">
+            <summary>
+            获取分组中的用户信息
+            </summary>
+            <param name="groupId">对应组的Id，当Id为null时，从“未分组”依次向下搜索，直到获取到maxCount数量的信息</param>
+            <param name="maxCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.GetFriendsDetails(System.Int64[])">
+            <summary>
+            获取一批fakeid对应的详细信息
+            </summary>
+            <param name="fakeids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.GetFriendHeadImage(System.Int64)">
+            <summary>
+            获取一批fakeid对应的详细信息
+            </summary>
+            <param name="fakeid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.FriendApi.BindFakeidOpenid(System.String,System.String,System.String)">
+            <summary>
+            请求Fakeid-Openid匹配
+            </summary>
+            <param name="openid"></param>
+            <param name="keyword"></param>
+            <param name="p2pBridgeUrl">如果为空，则使用www.souidea.com后台设置的P2PUrl，无论使用哪一个，都共用后台的P2PBridge Token，所以后台必须有一个可用的Url验证通过</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MediaApi.GetVoice(System.Nullable{System.Int64},System.String)">
+            <summary>
+            获取语音文件（测试阶段限5秒以下）
+            </summary>
+            <param name="fakeid">指定用户fakeid。如果不为空，则获取该用户最新一个语音；
+            如果为空，获取全局任意人的第一个语音（限前50条消息中）</param>
+            <param name="argument">用于推送到P2PBridge的识别参数，可以为ID等参数，不可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Int64,System.String,System.String)">
+            <summary>
+            发送简单消息
+            </summary>
+            <param name="fakeid"></param>
+            <param name="text"></param>
+            <param name="imgcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Int64,System.Int64,System.String)">
+            <summary>
+            发送已经存在appMsgId的图文信息
+            </summary>
+            <param name="fakeid"></param>
+            <param name="appMsgId"></param>
+            <param name="imgcode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Collections.Generic.List{System.String},System.Collections.Generic.List{Senparc.Weixin.MP.Entities.Article})">
+            <summary>
+            发送图文消息
+            </summary>
+            <param name="usernames"></param>
+            <param name="articles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.ApiContainer">
+            <summary>
+            API操作容器（每次构造都会获取当前缓存中最新的Passport）
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.PassportCollection.Url">
+            <summary>
+            统一URL前缀，如http://api.souidea.com:8282/P2P/
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.SdkManager.Register(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            注册P2P应用基本信息（可以选择不立即载入Passport以节省系统启动时间）
+            </summary>
+            <param name="appKey">P2P后台申请到微信应用后的AppKey</param>
+            <param name="secret">AppKey对应的Secret</param>
+            <param name="url">API地址，建议使用默认值</param>
+            <param name="getPassportImmediately">是否马上获取Passport，默认为False</param>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.SdkManager.ApplyPassport(System.String,System.String,System.String)">
+            <summary>
+            申请新的通行证。
+            每次调用完毕前将有1秒左右的Thread.Sleep时间
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.SdkManager.RemovePassport(System.String)">
+            <summary>
+            清除当前的通行证
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.SdkManager.GetApiContainer(System.String,System.String,System.String)">
+            <summary>
+            获取appKey对应的接口集合。
+            调用此方法请确认此appKey已经成功使用SdkManager.Register(appKey, appSecret, appUrl)方法注册过。
+            </summary>
+            <param name="appKey"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

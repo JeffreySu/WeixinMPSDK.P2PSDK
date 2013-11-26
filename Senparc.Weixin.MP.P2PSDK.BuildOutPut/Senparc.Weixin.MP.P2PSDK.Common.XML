@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.Weixin.MP.P2PSDK.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.Bridge.BridgeType">
+            <summary>
+            P2P Bridge推送类型
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.P2PResult`1">
+            <summary>
+            JSON返回结果（用于菜单接口等）
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.P2PResult`1.Data">
+            <summary>
+            如果结果未成功，则Data为期望的类型
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.P2PResult`1.ErrorMessage">
+            <summary>
+            错误信息，如果结果为成功，错误信息为Null
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.P2PResult`1.RunTime">
+            <summary>
+            Api执行时间
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.NewFriendsResultData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.NewFriendsResultData.HasMoreInfo">
+            <summary>
+            还有更多未载入信息
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.NewFriendsResultData.FriendsJsonDataList">
+            <summary>
+            用户信息列表
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.GetVoiceResult">
+            <summary>
+            获取语音结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.NormalP2PResult">
+            <summary>
+            普通P2P返回类型
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.PassportResult">
+            <summary>
+            获取通行证结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.SendMessageResult">
+            <summary>
+            发送单条消息结果
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.SendMessageResult.VerifyCode">
+            <summary>
+            验证码（如果不需要提供验证码则为null）
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.SendMessageNewsResult">
+            <summary>
+            发送图文消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.SendMessageNewsData">
+            <summary>
+            发送图文消息数据类型
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.GetFriendsDetailsResult">
+            <summary>
+            发送消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendsDetailsData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.FriendsDetailsData.WeixinUserInfoList">
+            <summary>
+            用户信息列表
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.GetFriendHeadImageResult">
+            <summary>
+            发送消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendHeadImageData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.FriendHeadImageData.HeadImageBase64">
+            <summary>
+            储存头像信息Base64编码
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.P2PBridgeCallbackResult">
+            <summary>
+            发送消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.P2PBridgeCallbackData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.P2PBridgeCallbackData.Message">
+            <summary>
+            储存头像信息Base64编码
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.Passport">
+            <summary>
+            P2P通行证
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Passport.WeixinAppId">
+            <summary>
+            供P2P服务器记录唯一标准
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.Common.Utility.StreamUtility.GetBase64String(System.IO.Stream)">
+            <summary>
+            获取Stream的Base64字符串
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.Common.Utility.StreamUtility.GetStreamFromBase64String(System.String,System.String)">
+            <summary>
+            将base64String反序列化到流，或保存成文件
+            </summary>
+            <param name="base64String"></param>
+            <param name="savePath">如果为null则不保存</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.Common.Utility.StreamUtility.SaveFileFromStream(System.IO.MemoryStream,System.String)">
+            <summary>
+            将memoryStream保存到文件
+            </summary>
+            <param name="memoryStream"></param>
+            <param name="savePath"></param>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.BaseResp">
+            <summary>
+            对应base_resp，比如出现在用户用户详细信息中
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.ContactInfo">
+            <summary>
+            用户详细信息
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.ContactInfo.Id">
+            <summary>
+            此Id为数据库主键，非微信信息
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.ContactInfo.gender">
+            <summary>
+            性别。男：1，女：2
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendsJsonData">
+            <summary>
+            输出在页面中的用户Json信息
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.GroupData">
+            <summary>
+            分组信息
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.GroupData.id">
+            <summary>
+            分组编号
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.GroupData.name">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.GroupData.cnt">
+            <summary>
+            组内总人数
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.WeixinUserInfoJson">
+            <summary>
+            通过Ajax获取的用户信息（JSON格式）
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.PostMessageResult">
+            <summary>
+            发送消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.GetFriendsResult">
+            <summary>
+            发送消息结果
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendsResultData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.FriendsResultData.FriendsJsonDataList">
+            <summary>
+            用户信息列表
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.P2PResultKind">
+            <summary>
+            P2P返回结果类型
+            </summary>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.WeixinSex">
+            <summary>
+            性别
+            </summary>
+        </member>
+    </members>
+</doc>
