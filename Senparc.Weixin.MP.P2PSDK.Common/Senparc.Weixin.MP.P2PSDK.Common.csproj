@@ -50,9 +50,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Senparc.Weixin.MP, Version=1.1.4935.25155, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Senparc.Weixin.MP, Version=4.5.1.38134, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Senparc.Weixin.MP.dll</HintPath>
+      <HintPath>..\Senparc.Weixin.MP.P2PSDK.TestTools\Senparc.Weixin.MP.P2PSDK.TestTools\packages\Senparc.Weixin.MP.4.5.1\lib\net35\Senparc.Weixin.MP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,7 +85,9 @@
     <Compile Include="Entities\P2PResult\GetFriendsResult.cs" />
     <Compile Include="Enums.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
