@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Senparc.Weixin.MP</id>
+    <version>4.5.1</version>
+    <title>Senparc.Weixin.MP.dll</title>
+    <authors>苏震巍</authors>
+    <owners>苏震巍</owners>
+    <licenseUrl>https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md</licenseUrl>
+    <projectUrl>https://github.com/JeffreySu/WeiXinMPSDK</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>微信公众账号SDK：Senparc.Weixin.MP.dll
+开源项目：
+https://github.com/JeffreySu/WeiXinMPSDK</description>
+    <releaseNotes>升级MessageAgent，添加SouideaKey。
+有关SouideaKey的说明请见：http://www.souidea.com/ApiDocuments/Item/25#51
+
+添加用户对话上下文（MessageContext）删除时候的事件，方便程序开发的时候捕获删除事件并进行相应的操作（例如客服关闭提醒）
+
+添加Get方法传Cookie
+
+添加视屏消息格式</releaseNotes>
+    <copyright>Senparc</copyright>
+  </metadata>
+</package>
