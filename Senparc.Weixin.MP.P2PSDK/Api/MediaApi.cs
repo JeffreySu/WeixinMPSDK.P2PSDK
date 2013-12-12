@@ -18,7 +18,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private GetVoiceResult GetVoiceFunc(long? fakeid, string argument)
         {
-            var url = _passport.Url + "GetVoice";
+            var url = _passport.P2PUrl + "GetVoice";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["fakeid"] = fakeid == null ? "" : fakeid.Value.ToString();

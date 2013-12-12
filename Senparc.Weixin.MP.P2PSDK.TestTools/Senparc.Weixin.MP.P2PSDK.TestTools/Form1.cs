@@ -12,6 +12,7 @@ using Senparc.Weixin.MP.Entities;
 using Senparc.Weixin.MP.Helpers;
 using Senparc.Weixin.MP.HttpUtility;
 using Senparc.Weixin.MP.P2PSDK.Common;
+using Image = Senparc.Weixin.MP.Entities.Image;
 
 namespace Senparc.Weixin.MP.P2PSDK.TestTools
 {
@@ -69,12 +70,8 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
         private void CheckGroupBoxVisible()
         {
             var visible = initSuccessed;
-            gbSendMessage.Visible = visible;
+            tab.Visible = visible;
             gbFriends.Visible = visible;
-            gbSendMessageNews.Visible = visible;
-            gbFakeidBind.Visible = visible;
-            gbVerifyCode.Visible = visible;
-            gbMedia.Visible = visible;
             btnTestWrongApi.Visible = visible;
             lblAppKeyNotice.Visible = visible;
         }
@@ -167,7 +164,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
                 MemoryStream memoryStream = new MemoryStream(imageBytes, 0, imageBytes.Length);
                 memoryStream.Write(imageBytes, 0, imageBytes.Length);
                 //转成图片
-                Image image = Image.FromStream(memoryStream);
+                var image = System.Drawing.Image.FromStream(memoryStream);
                 picVerifyCode.Image = image;
                 txtVerifyCode.Visible = true;
                 txtVerifyCode.Text = "";
@@ -327,7 +324,7 @@ headImageFilename);
                 {
                     memoryStream.Write(imageBytes, 0, imageBytes.Length);
                     //转成图片
-                    Image image = Image.FromStream(memoryStream);
+                    var image = System.Drawing.Image.FromStream(memoryStream);
                     //保存图片
                     image.Save(filePath, ImageFormat.Jpeg);
 
@@ -486,7 +483,7 @@ headImageFilename);
 
             var passport = GetApiContainer.Passport;
 
-            var url = passport.Url + "AnyNotExistApi";
+            var url = passport.P2PUrl + "AnyNotExistApi";
             var formData = new Dictionary<string, string>();
             formData["token"] = passport.Token;//也可以是不存在的Token
 
@@ -506,6 +503,62 @@ API执行时间：{2}", result.Result.ToString(), (dt2 - dt1).TotalMilliseconds,
             var cb = (ComboBox)sender;
             var selectedItem = (GroupData)cb.SelectedItem;
             lblGroupCnt.Text = selectedItem.cnt.ToString();
+        }
+
+        private void btnMember_GetMemberinfo_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtOpenId.Text))
+            {
+                MessageBox.Show("请输入有效的OpenID！");
+                return;
+            }
+
+            var memberInfoResult = GetApiContainer.MemberApi.GetMemberInfo(txtOpenId.Text.Trim());
+            if (memberInfoResult.Result != P2PResultKind.成功)
+            {
+                MessageBox.Show(memberInfoResult.Result.ToString());
+                return;
+            }
+
+            var memberInfo = memberInfoResult.Data;
+            MessageBox.Show(string.Format(@"用户信息获取成功：
+会员卡号：{0}
+OpenId：{1}
+加入时间：{2}
+当前积分：{3}
+真实姓名：{4}
+电话号码：{5}",
+memberInfo.CardNumber,
+memberInfo.OpenId,
+memberInfo.AddTime,
+memberInfo.Points,
+memberInfo.RealName,
+memberInfo.Phone));
+        }
+
+        private void btnChangePoints_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtOpenId.Text))
+            {
+                MessageBox.Show("请输入有效的OpenID！");
+                return;
+            }
+
+            int points = 0;
+            if (txtChangePoints.Text == null || !int.TryParse(txtChangePoints.Text, out points))
+            {
+                MessageBox.Show("请输入有效的积分值！正数为加分，负数为减分");
+                return;
+            }
+
+            var memberInfoResult = GetApiContainer.MemberApi.ChangeMemberPoint(txtOpenId.Text.Trim(), points);
+            if (memberInfoResult.Result != P2PResultKind.成功)
+            {
+                MessageBox.Show(memberInfoResult.Result.ToString());
+                return;
+            }
+
+            MessageBox.Show(string.Format("修改会员积分成功！当前积分：{0}", memberInfoResult.Data.Points));
         }
     }
 }

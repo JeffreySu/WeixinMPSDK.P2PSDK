@@ -29,6 +29,16 @@
             Api执行时间
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Entities.MemberInfoResultData.CardNumber">
+            <summary>
+            会员卡号
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Entities.MemberInfoResultData.Points">
+            <summary>
+            当前积分
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.MP.P2PSDK.Common.NewFriendsResultData">
             <summary>
             用户数据
@@ -127,6 +137,16 @@
         <member name="T:Senparc.Weixin.MP.P2PSDK.Common.Passport">
             <summary>
             P2P通行证
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Passport.P2PUrl">
+            <summary>
+            P2P常规URL
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Passport.MarketToolUrl">
+            <summary>
+            微信营销工具URL
             </summary>
         </member>
         <member name="P:Senparc.Weixin.MP.P2PSDK.Common.Passport.WeixinAppId">

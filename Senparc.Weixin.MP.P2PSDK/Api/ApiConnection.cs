@@ -30,7 +30,7 @@ namespace Senparc.Weixin.MP.P2PSDK
             if (result.Result == P2PResultKind.账户验证失败)
             {
                 //更新Passport
-                SdkManager.ApplyPassport(_passport.AppKey, _passport.Secret, _passport.Url);
+                SdkManager.ApplyPassport(_passport.AppKey, _passport.Secret, _passport.P2PUrl);
                 result = apiFunc();
             }
             return result;

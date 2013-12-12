@@ -19,7 +19,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private SendMessageResult SendMessageFunc(long fakeid, string text = null, long? appMsgId = null, string imgcode = null)
         {
-            var url = _passport.Url + "SendMessage";
+            var url = _passport.P2PUrl + "SendMessage";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["fakeid"] = fakeid.ToString();
@@ -42,7 +42,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private SendMessageNewsResult SendMessageFunc(List<string> usernames, List<Article> articles)
         {
-            var url = _passport.Url + "SendMessageNews";
+            var url = _passport.P2PUrl + "SendMessageNews";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             for (int i = 0; i < usernames.Count; i++)

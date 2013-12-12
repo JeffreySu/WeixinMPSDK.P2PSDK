@@ -13,7 +13,14 @@ namespace Senparc.Weixin.MP.P2PSDK.Common
         public string Token { get; set; }
         public string AppKey { get; set; }
         public string Secret { get; set; }
-        public string Url { get; set; }
+        /// <summary>
+        /// P2P常规URL
+        /// </summary>
+        public string P2PUrl { get; set; }
+        /// <summary>
+        /// 微信营销工具URL
+        /// </summary>
+        public string MarketToolUrl { get; set; }
         public string UserName { get; set; }
         public string PasswordMd5 { get; set; }
         public DateTime CreateTime { get; set; }

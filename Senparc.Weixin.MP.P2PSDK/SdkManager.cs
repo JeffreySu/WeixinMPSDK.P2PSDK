@@ -39,7 +39,8 @@ namespace Senparc.Weixin.MP.P2PSDK
             return null;
         }
 
-        public const string ApiPath = "/P2P/";
+        public const string BasicApiPath = "/P2P/";
+        public const string MarketingToolApiPath = "/MarketingTool/";
 
         /// <summary>
         /// 注册P2P应用基本信息（可以选择不立即载入Passport以节省系统启动时间）
@@ -50,12 +51,14 @@ namespace Senparc.Weixin.MP.P2PSDK
         /// <param name="getPassportImmediately">是否马上获取Passport，默认为False</param>
         private static void Register(string appKey, string secret, string url = DEFAULT_URL, bool getPassportImmediately = false)
         {
-            if (PassportCollection.Url != url)
-            {
-                PassportCollection.Url = url + ApiPath;
-            }
+            //if (PassportCollection.BasicUrl != url)
+            //{
+            ////不使用默认地址
+            PassportCollection.BasicUrl = url + BasicApiPath;
+            PassportCollection.MarketingToolUrl = url + MarketingToolApiPath;
+            //}
 
-            PassportCollection[appKey] = new PassportBag(appKey, secret, url + ApiPath);
+            PassportCollection[appKey] = new PassportBag(appKey, secret, url + BasicApiPath);
             if (getPassportImmediately)
             {
                 ApplyPassport(appKey, secret, url);
@@ -76,7 +79,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
             var passportBag = PassportCollection[appKey];
 
-            var getPassportUrl = PassportCollection.Url + "GetPassport";
+            var getPassportUrl = PassportCollection.BasicUrl + "GetPassport";
             var formData = new Dictionary<string, string>();
             formData["appKey"] = passportBag.AppKey;
             formData["secret"] = passportBag.AppSecret;
@@ -86,8 +89,9 @@ namespace Senparc.Weixin.MP.P2PSDK
                 throw new WeixinException("获取Passort失败！错误信息：" + result.Result, null);
             }
 
-            passportBag.Passport = result.Data as Passport;
-            passportBag.Passport.Url = PassportCollection.Url;
+            passportBag.Passport = result.Data;
+            passportBag.Passport.P2PUrl = PassportCollection.BasicUrl;
+            passportBag.Passport.MarketToolUrl = PassportCollection.MarketingToolUrl;
 
             //为了更加贴近真是登陆，并且防止502等页面错误产生，这里适当添加一些间隔时间
             Thread.Sleep(1000);

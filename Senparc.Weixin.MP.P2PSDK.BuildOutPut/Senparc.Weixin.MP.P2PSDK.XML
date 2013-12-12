@@ -102,7 +102,32 @@
             API操作容器（每次构造都会获取当前缓存中最新的Passport）
             </summary>
         </member>
-        <member name="P:Senparc.Weixin.MP.P2PSDK.PassportCollection.Url">
+        <member name="P:Senparc.Weixin.MP.P2PSDK.ApiContainer.MemberApi">
+            <summary>
+            属于“营销工具”接口
+            </summary>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MarketingToolApi.MemberApi.GetMemberInfo(System.String)">
+            <summary>
+            获取会员信息
+            </summary>
+            <param name="openId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MarketingToolApi.MemberApi.ChangeMemberPoint(System.String,System.Int32)">
+            <summary>
+            修改会员积分
+            </summary>
+            <param name="openId"></param>
+            <param name="points"></param>
+            <returns>最新会员信息，包括积分</returns>
+        </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.PassportCollection">
+            <summary>
+            同时管理多个应用的Passport的容器
+            </summary>
+        </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.PassportCollection.BasicUrl">
             <summary>
             统一URL前缀，如http://api.souidea.com:8282/P2P/
             </summary>

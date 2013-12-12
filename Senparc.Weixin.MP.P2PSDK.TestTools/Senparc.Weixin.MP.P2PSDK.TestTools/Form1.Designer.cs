@@ -65,32 +65,50 @@
             this.txtNewsAppMsgId = new System.Windows.Forms.TextBox();
             this.txtSendNewsMessageFakeid = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.gbFakeidBind = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnFakeIdBind = new System.Windows.Forms.Button();
-            this.txtFakeidBindFakeid = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.gbVerifyCode = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.gbMedia = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnGetVoice = new System.Windows.Forms.Button();
-            this.txtMediaFakeid = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.btnSwitch = new System.Windows.Forms.Button();
             this.btnTestWrongApi = new System.Windows.Forms.Button();
             this.lblAppKeyNotice = new System.Windows.Forms.Label();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.txtAppKey = new System.Windows.Forms.ComboBox();
+            this.tab = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gbFakeidBind = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnFakeIdBind = new System.Windows.Forms.Button();
+            this.txtFakeidBindFakeid = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.gbMedia = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnGetVoice = new System.Windows.Forms.Button();
+            this.txtMediaFakeid = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMember_GetMemberinfo = new System.Windows.Forms.Button();
+            this.txtOpenId = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtChangePoints = new System.Windows.Forms.TextBox();
+            this.btnChangePoints = new System.Windows.Forms.Button();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHeaderImage)).BeginInit();
             this.gbSendMessageNews.SuspendLayout();
-            this.gbFakeidBind.SuspendLayout();
             this.gbVerifyCode.SuspendLayout();
+            this.tab.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.gbFakeidBind.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.gbMedia.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -163,7 +181,7 @@
             this.gbSendMessage.Controls.Add(this.label6);
             this.gbSendMessage.Controls.Add(this.txtSendMessageFakeid);
             this.gbSendMessage.Controls.Add(this.label5);
-            this.gbSendMessage.Location = new System.Drawing.Point(19, 296);
+            this.gbSendMessage.Location = new System.Drawing.Point(6, 5);
             this.gbSendMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbSendMessage.Name = "gbSendMessage";
             this.gbSendMessage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -171,7 +189,6 @@
             this.gbSendMessage.TabIndex = 9;
             this.gbSendMessage.TabStop = false;
             this.gbSendMessage.Text = "单发消息测试";
-            this.gbSendMessage.Visible = false;
             // 
             // btnSendMessageSend
             // 
@@ -310,7 +327,7 @@
             this.gbFriends.Controls.Add(this.btnGetGroupFriends);
             this.gbFriends.Controls.Add(this.cbGroupIds);
             this.gbFriends.Controls.Add(this.btnGetGroupIds);
-            this.gbFriends.Location = new System.Drawing.Point(16, 160);
+            this.gbFriends.Location = new System.Drawing.Point(12, 160);
             this.gbFriends.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbFriends.Name = "gbFriends";
             this.gbFriends.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -429,7 +446,7 @@
             this.gbSendMessageNews.Controls.Add(this.txtSendMessageTitle);
             this.gbSendMessageNews.Controls.Add(this.label7);
             this.gbSendMessageNews.Controls.Add(this.label8);
-            this.gbSendMessageNews.Location = new System.Drawing.Point(19, 396);
+            this.gbSendMessageNews.Location = new System.Drawing.Point(6, 105);
             this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbSendMessageNews.Name = "gbSendMessageNews";
             this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -437,7 +454,6 @@
             this.gbSendMessageNews.TabIndex = 10;
             this.gbSendMessageNews.TabStop = false;
             this.gbSendMessageNews.Text = "图文消息测试";
-            this.gbSendMessageNews.Visible = false;
             // 
             // label18
             // 
@@ -473,63 +489,10 @@
             this.label17.TabIndex = 5;
             this.label17.Text = "fakeid：";
             // 
-            // gbFakeidBind
-            // 
-            this.gbFakeidBind.Controls.Add(this.label11);
-            this.gbFakeidBind.Controls.Add(this.btnFakeIdBind);
-            this.gbFakeidBind.Controls.Add(this.txtFakeidBindFakeid);
-            this.gbFakeidBind.Controls.Add(this.label10);
-            this.gbFakeidBind.Location = new System.Drawing.Point(16, 499);
-            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFakeidBind.Name = "gbFakeidBind";
-            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFakeidBind.Size = new System.Drawing.Size(743, 66);
-            this.gbFakeidBind.TabIndex = 11;
-            this.gbFakeidBind.TabStop = false;
-            this.gbFakeidBind.Text = "Fakeid-Openid自动匹配";
-            this.gbFakeidBind.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(308, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(358, 15);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "注意：请先确保P2P后台的P2PBridge已经完成设置。";
-            // 
-            // btnFakeIdBind
-            // 
-            this.btnFakeIdBind.Location = new System.Drawing.Point(192, 26);
-            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFakeIdBind.Name = "btnFakeIdBind";
-            this.btnFakeIdBind.Size = new System.Drawing.Size(109, 22);
-            this.btnFakeIdBind.TabIndex = 2;
-            this.btnFakeIdBind.Text = "模拟测试";
-            this.btnFakeIdBind.UseVisualStyleBackColor = true;
-            this.btnFakeIdBind.Click += new System.EventHandler(this.btnFakeIdBind_Click);
-            // 
-            // txtFakeidBindFakeid
-            // 
-            this.txtFakeidBindFakeid.Location = new System.Drawing.Point(71, 24);
-            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFakeidBindFakeid.Name = "txtFakeidBindFakeid";
-            this.txtFakeidBindFakeid.Size = new System.Drawing.Size(115, 25);
-            this.txtFakeidBindFakeid.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "fakeid：";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(325, 636);
+            this.label13.Location = new System.Drawing.Point(328, 532);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(420, 15);
             this.label13.TabIndex = 12;
@@ -540,7 +503,7 @@
             this.gbVerifyCode.Controls.Add(this.label14);
             this.gbVerifyCode.Controls.Add(this.picVerifyCode);
             this.gbVerifyCode.Controls.Add(this.txtVerifyCode);
-            this.gbVerifyCode.Location = new System.Drawing.Point(464, 296);
+            this.gbVerifyCode.Location = new System.Drawing.Point(451, 5);
             this.gbVerifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbVerifyCode.Name = "gbVerifyCode";
             this.gbVerifyCode.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -548,7 +511,6 @@
             this.gbVerifyCode.TabIndex = 13;
             this.gbVerifyCode.TabStop = false;
             this.gbVerifyCode.Text = "验证码";
-            this.gbVerifyCode.Visible = false;
             // 
             // label14
             // 
@@ -558,60 +520,6 @@
             this.label14.Size = new System.Drawing.Size(157, 30);
             this.label14.TabIndex = 7;
             this.label14.Text = "左侧出现图片时，\r\n将验证码填写在这里：";
-            // 
-            // gbMedia
-            // 
-            this.gbMedia.Controls.Add(this.label16);
-            this.gbMedia.Controls.Add(this.btnGetVoice);
-            this.gbMedia.Controls.Add(this.txtMediaFakeid);
-            this.gbMedia.Controls.Add(this.label15);
-            this.gbMedia.Location = new System.Drawing.Point(19, 571);
-            this.gbMedia.Margin = new System.Windows.Forms.Padding(4);
-            this.gbMedia.Name = "gbMedia";
-            this.gbMedia.Padding = new System.Windows.Forms.Padding(4);
-            this.gbMedia.Size = new System.Drawing.Size(744, 61);
-            this.gbMedia.TabIndex = 14;
-            this.gbMedia.TabStop = false;
-            this.gbMedia.Text = "媒体文件";
-            this.gbMedia.Visible = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(339, 29);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(310, 15);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "如果fakeid留空，则从全局消息中获取第一个";
-            // 
-            // btnGetVoice
-            // 
-            this.btnGetVoice.Location = new System.Drawing.Point(193, 25);
-            this.btnGetVoice.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGetVoice.Name = "btnGetVoice";
-            this.btnGetVoice.Size = new System.Drawing.Size(137, 22);
-            this.btnGetVoice.TabIndex = 4;
-            this.btnGetVoice.Text = "下载音频文件";
-            this.btnGetVoice.UseVisualStyleBackColor = true;
-            this.btnGetVoice.Click += new System.EventHandler(this.btnGetVoice_Click);
-            // 
-            // txtMediaFakeid
-            // 
-            this.txtMediaFakeid.Location = new System.Drawing.Point(71, 25);
-            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMediaFakeid.Name = "txtMediaFakeid";
-            this.txtMediaFakeid.Size = new System.Drawing.Size(115, 25);
-            this.txtMediaFakeid.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 15);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "fakeid：";
             // 
             // btnSwitch
             // 
@@ -662,22 +570,247 @@
             this.txtAppKey.Size = new System.Drawing.Size(292, 23);
             this.txtAppKey.TabIndex = 18;
             // 
+            // tab
+            // 
+            this.tab.Controls.Add(this.tabPage1);
+            this.tab.Controls.Add(this.tabPage3);
+            this.tab.Controls.Add(this.tabPage4);
+            this.tab.Controls.Add(this.tabPage2);
+            this.tab.Location = new System.Drawing.Point(12, 289);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(775, 240);
+            this.tab.TabIndex = 19;
+            this.tab.Visible = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gbSendMessage);
+            this.tabPage1.Controls.Add(this.gbSendMessageNews);
+            this.tabPage1.Controls.Add(this.gbVerifyCode);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(767, 211);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "消息发送";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.gbFakeidBind);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(767, 211);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "OpenId-FakeId绑定";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // gbFakeidBind
+            // 
+            this.gbFakeidBind.Controls.Add(this.label11);
+            this.gbFakeidBind.Controls.Add(this.btnFakeIdBind);
+            this.gbFakeidBind.Controls.Add(this.txtFakeidBindFakeid);
+            this.gbFakeidBind.Controls.Add(this.label10);
+            this.gbFakeidBind.Location = new System.Drawing.Point(8, 2);
+            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFakeidBind.Name = "gbFakeidBind";
+            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFakeidBind.Size = new System.Drawing.Size(743, 66);
+            this.gbFakeidBind.TabIndex = 12;
+            this.gbFakeidBind.TabStop = false;
+            this.gbFakeidBind.Text = "Fakeid-Openid自动匹配";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(308, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(358, 15);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "注意：请先确保P2P后台的P2PBridge已经完成设置。";
+            // 
+            // btnFakeIdBind
+            // 
+            this.btnFakeIdBind.Location = new System.Drawing.Point(192, 26);
+            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFakeIdBind.Name = "btnFakeIdBind";
+            this.btnFakeIdBind.Size = new System.Drawing.Size(109, 22);
+            this.btnFakeIdBind.TabIndex = 2;
+            this.btnFakeIdBind.Text = "模拟测试";
+            this.btnFakeIdBind.UseVisualStyleBackColor = true;
+            // 
+            // txtFakeidBindFakeid
+            // 
+            this.txtFakeidBindFakeid.Location = new System.Drawing.Point(71, 24);
+            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFakeidBindFakeid.Name = "txtFakeidBindFakeid";
+            this.txtFakeidBindFakeid.Size = new System.Drawing.Size(115, 25);
+            this.txtFakeidBindFakeid.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "fakeid：";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.gbMedia);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(767, 211);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "媒体文件下载";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // gbMedia
+            // 
+            this.gbMedia.Controls.Add(this.label16);
+            this.gbMedia.Controls.Add(this.btnGetVoice);
+            this.gbMedia.Controls.Add(this.txtMediaFakeid);
+            this.gbMedia.Controls.Add(this.label15);
+            this.gbMedia.Location = new System.Drawing.Point(4, 4);
+            this.gbMedia.Margin = new System.Windows.Forms.Padding(4);
+            this.gbMedia.Name = "gbMedia";
+            this.gbMedia.Padding = new System.Windows.Forms.Padding(4);
+            this.gbMedia.Size = new System.Drawing.Size(744, 61);
+            this.gbMedia.TabIndex = 15;
+            this.gbMedia.TabStop = false;
+            this.gbMedia.Text = "音频文件";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(339, 29);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(310, 15);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "如果fakeid留空，则从全局消息中获取第一个";
+            // 
+            // btnGetVoice
+            // 
+            this.btnGetVoice.Location = new System.Drawing.Point(193, 25);
+            this.btnGetVoice.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGetVoice.Name = "btnGetVoice";
+            this.btnGetVoice.Size = new System.Drawing.Size(137, 22);
+            this.btnGetVoice.TabIndex = 4;
+            this.btnGetVoice.Text = "下载音频文件";
+            this.btnGetVoice.UseVisualStyleBackColor = true;
+            // 
+            // txtMediaFakeid
+            // 
+            this.txtMediaFakeid.Location = new System.Drawing.Point(71, 25);
+            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMediaFakeid.Name = "txtMediaFakeid";
+            this.txtMediaFakeid.Size = new System.Drawing.Size(115, 25);
+            this.txtMediaFakeid.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 15);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "fakeid：";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(767, 211);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "微信营销工具接口";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnChangePoints);
+            this.groupBox1.Controls.Add(this.txtChangePoints);
+            this.groupBox1.Controls.Add(this.btnMember_GetMemberinfo);
+            this.groupBox1.Controls.Add(this.txtOpenId);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Location = new System.Drawing.Point(3, 36);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(756, 94);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "会员";
+            // 
+            // btnMember_GetMemberinfo
+            // 
+            this.btnMember_GetMemberinfo.Location = new System.Drawing.Point(331, 15);
+            this.btnMember_GetMemberinfo.Name = "btnMember_GetMemberinfo";
+            this.btnMember_GetMemberinfo.Size = new System.Drawing.Size(115, 23);
+            this.btnMember_GetMemberinfo.TabIndex = 2;
+            this.btnMember_GetMemberinfo.Text = "获取会员信息";
+            this.btnMember_GetMemberinfo.UseVisualStyleBackColor = true;
+            this.btnMember_GetMemberinfo.Click += new System.EventHandler(this.btnMember_GetMemberinfo_Click);
+            // 
+            // txtOpenId
+            // 
+            this.txtOpenId.Location = new System.Drawing.Point(63, 14);
+            this.txtOpenId.Name = "txtOpenId";
+            this.txtOpenId.Size = new System.Drawing.Size(262, 25);
+            this.txtOpenId.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 15);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "OpenId";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(912, 30);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后在www.souidea.com后台\r\n" +
+    "针对指定的微信应用账号开通“微信营销工具”之后，才能使用。";
+            // 
+            // txtChangePoints
+            // 
+            this.txtChangePoints.Location = new System.Drawing.Point(452, 14);
+            this.txtChangePoints.Name = "txtChangePoints";
+            this.txtChangePoints.Size = new System.Drawing.Size(65, 25);
+            this.txtChangePoints.TabIndex = 3;
+            this.txtChangePoints.Text = "0";
+            // 
+            // btnChangePoints
+            // 
+            this.btnChangePoints.Location = new System.Drawing.Point(524, 16);
+            this.btnChangePoints.Name = "btnChangePoints";
+            this.btnChangePoints.Size = new System.Drawing.Size(174, 23);
+            this.btnChangePoints.TabIndex = 4;
+            this.btnChangePoints.Text = "增减积分（正负整数）";
+            this.btnChangePoints.UseVisualStyleBackColor = true;
+            this.btnChangePoints.Click += new System.EventHandler(this.btnChangePoints_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 660);
+            this.ClientSize = new System.Drawing.Size(771, 553);
+            this.Controls.Add(this.gbFriends);
+            this.Controls.Add(this.tab);
             this.Controls.Add(this.txtAppKey);
             this.Controls.Add(this.lblAppKeyNotice);
             this.Controls.Add(this.btnTestWrongApi);
             this.Controls.Add(this.btnSwitch);
-            this.Controls.Add(this.gbMedia);
-            this.Controls.Add(this.gbVerifyCode);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.gbFakeidBind);
-            this.Controls.Add(this.gbSendMessageNews);
-            this.Controls.Add(this.gbFriends);
-            this.Controls.Add(this.gbSendMessage);
             this.Controls.Add(this.lblToken);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRegister);
@@ -688,7 +821,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v2013.11.24 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2013.12.12 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
@@ -697,12 +830,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHeaderImage)).EndInit();
             this.gbSendMessageNews.ResumeLayout(false);
             this.gbSendMessageNews.PerformLayout();
-            this.gbFakeidBind.ResumeLayout(false);
-            this.gbFakeidBind.PerformLayout();
             this.gbVerifyCode.ResumeLayout(false);
             this.gbVerifyCode.PerformLayout();
+            this.tab.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.gbFakeidBind.ResumeLayout(false);
+            this.gbFakeidBind.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.gbMedia.ResumeLayout(false);
             this.gbMedia.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,11 +878,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSendMessageUserName;
         private System.Windows.Forms.GroupBox gbSendMessageNews;
-        private System.Windows.Forms.GroupBox gbFakeidBind;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnFakeIdBind;
-        private System.Windows.Forms.TextBox txtFakeidBindFakeid;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnGetAllFriends;
         private System.Windows.Forms.PictureBox picVerifyCode;
@@ -750,11 +886,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox gbVerifyCode;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox gbMedia;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnGetVoice;
-        private System.Windows.Forms.TextBox txtMediaFakeid;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnSwitch;
         private System.Windows.Forms.Button btnTestWrongApi;
         private System.Windows.Forms.Label lblGroupCnt;
@@ -765,6 +896,28 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtNewsAppMsgId;
+        private System.Windows.Forms.TabControl tab;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox gbFakeidBind;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnFakeIdBind;
+        private System.Windows.Forms.TextBox txtFakeidBindFakeid;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox gbMedia;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnGetVoice;
+        private System.Windows.Forms.TextBox txtMediaFakeid;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnMember_GetMemberinfo;
+        private System.Windows.Forms.TextBox txtOpenId;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnChangePoints;
+        private System.Windows.Forms.TextBox txtChangePoints;
     }
 }
 

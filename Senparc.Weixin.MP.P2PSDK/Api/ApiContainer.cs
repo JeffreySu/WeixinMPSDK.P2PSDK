@@ -16,6 +16,10 @@ namespace Senparc.Weixin.MP.P2PSDK
         public FriendApi FriendApi { get; set; }
         public MessageApi MessageApi { get; set; }
         public MediaApi MediaApi { get; set; }
+        /// <summary>
+        /// 属于“营销工具”接口
+        /// </summary>
+        public MarketingToolApi.MemberApi MemberApi { get; set; }
 
         public ApiContainer(string appKey, string appSecret, string url = SdkManager.DEFAULT_URL)
         {
@@ -30,6 +34,7 @@ namespace Senparc.Weixin.MP.P2PSDK
             FriendApi = new FriendApi(Passport);
             MessageApi = new MessageApi(Passport);
             MediaApi = new MediaApi(Passport);
+            MemberApi = new MarketingToolApi.MemberApi(Passport);
         }
     }
 }

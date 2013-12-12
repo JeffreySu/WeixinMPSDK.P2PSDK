@@ -16,7 +16,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private GetGroupsResult GetGroupIdsFunc()
         {
-            var url = _passport.Url + "GetGroupIds";
+            var url = _passport.P2PUrl + "GetGroupIds";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             var result = HttpUtility.Post.PostGetJson<GetGroupsResult>(url, formData: formData);
@@ -31,7 +31,7 @@ namespace Senparc.Weixin.MP.P2PSDK
                 throw new WeixinException("必须指定一个存在的GroupId！", null);
             }
 
-            var url = _passport.Url + "GetGroupFriends";
+            var url = _passport.P2PUrl + "GetGroupFriends";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["groupId"] = groupId;
@@ -43,7 +43,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private GetFriendsResult GetFriendsFunc(string groupId, int maxCount)
         {
-            var url = _passport.Url + "GetFriends";
+            var url = _passport.P2PUrl + "GetFriends";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["groupId"] = groupId;
@@ -54,7 +54,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private GetFriendsDetailsResult GetFriendsDetailsFunc(long[] fakeids)
         {
-            var url = _passport.Url + "GetFriendsDetails";
+            var url = _passport.P2PUrl + "GetFriendsDetails";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             for (int i = 0; i < fakeids.Length; i++)
@@ -68,7 +68,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private GetFriendHeadImageResult GetFriendHeadImageFunc(string fakeid)
         {
-            var url = _passport.Url + "GetFriendHeadImage";
+            var url = _passport.P2PUrl + "GetFriendHeadImage";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["fakeid"] = fakeid;
@@ -78,7 +78,7 @@ namespace Senparc.Weixin.MP.P2PSDK
 
         private NormalP2PResult BindFakeidOpenidFunc(string openid, string keyword, string p2pBridgeUrl = null)
         {
-            var url = _passport.Url + "BindFakeidOpenid";
+            var url = _passport.P2PUrl + "BindFakeidOpenid";
             var formData = new Dictionary<string, string>();
             formData["token"] = _passport.Token;
             formData["openid"] = HttpUtility.RequestUtility.UrlEncode(openid);

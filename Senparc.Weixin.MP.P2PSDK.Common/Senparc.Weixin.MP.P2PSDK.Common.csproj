@@ -50,9 +50,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Senparc.Weixin.MP, Version=4.5.1.38134, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Senparc.Weixin.MP, Version=4.6.0.42903, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Senparc.Weixin.MP.P2PSDK.TestTools\Senparc.Weixin.MP.P2PSDK.TestTools\packages\Senparc.Weixin.MP.4.5.1\lib\net35\Senparc.Weixin.MP.dll</HintPath>
+      <HintPath>..\..\WeixinMPSDK.P2PServer\WebSite\packages\Senparc.Weixin.MP.4.6.0\lib\net35\Senparc.Weixin.MP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bridge\BridgeType.cs" />
+    <Compile Include="Entities\MarketingToolResult\MemberInfoResult.cs" />
     <Compile Include="Entities\P2PResult\GetGroupsResult.cs" />
     <Compile Include="Entities\P2PResult\GetNewFriendsResult.cs" />
     <Compile Include="Entities\P2PResult\GetVoiceResult.cs" />
@@ -85,8 +86,9 @@
     <Compile Include="Entities\P2PResult\GetFriendsResult.cs" />
     <Compile Include="Enums.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="packages.config" />
+    <Content Include="Entities\MarketingToolResult\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
