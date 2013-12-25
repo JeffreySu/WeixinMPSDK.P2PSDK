@@ -89,12 +89,12 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnChangePoints = new System.Windows.Forms.Button();
+            this.txtChangePoints = new System.Windows.Forms.TextBox();
             this.btnMember_GetMemberinfo = new System.Windows.Forms.Button();
             this.txtOpenId = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtChangePoints = new System.Windows.Forms.TextBox();
-            this.btnChangePoints = new System.Windows.Forms.Button();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
@@ -745,6 +745,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员";
             // 
+            // btnChangePoints
+            // 
+            this.btnChangePoints.Location = new System.Drawing.Point(524, 16);
+            this.btnChangePoints.Name = "btnChangePoints";
+            this.btnChangePoints.Size = new System.Drawing.Size(174, 23);
+            this.btnChangePoints.TabIndex = 4;
+            this.btnChangePoints.Text = "增减积分（正负整数）";
+            this.btnChangePoints.UseVisualStyleBackColor = true;
+            this.btnChangePoints.Click += new System.EventHandler(this.btnChangePoints_Click);
+            // 
+            // txtChangePoints
+            // 
+            this.txtChangePoints.Location = new System.Drawing.Point(452, 14);
+            this.txtChangePoints.Name = "txtChangePoints";
+            this.txtChangePoints.Size = new System.Drawing.Size(65, 25);
+            this.txtChangePoints.TabIndex = 3;
+            this.txtChangePoints.Text = "0";
+            // 
             // btnMember_GetMemberinfo
             // 
             this.btnMember_GetMemberinfo.Location = new System.Drawing.Point(331, 15);
@@ -776,28 +794,10 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(6, 3);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(912, 30);
+            this.label19.Size = new System.Drawing.Size(747, 30);
             this.label19.TabIndex = 0;
-            this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后在www.souidea.com后台\r\n" +
+            this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后\r\n在www.souidea.com后台" +
     "针对指定的微信应用账号开通“微信营销工具”之后，才能使用。";
-            // 
-            // txtChangePoints
-            // 
-            this.txtChangePoints.Location = new System.Drawing.Point(452, 14);
-            this.txtChangePoints.Name = "txtChangePoints";
-            this.txtChangePoints.Size = new System.Drawing.Size(65, 25);
-            this.txtChangePoints.TabIndex = 3;
-            this.txtChangePoints.Text = "0";
-            // 
-            // btnChangePoints
-            // 
-            this.btnChangePoints.Location = new System.Drawing.Point(524, 16);
-            this.btnChangePoints.Name = "btnChangePoints";
-            this.btnChangePoints.Size = new System.Drawing.Size(174, 23);
-            this.btnChangePoints.TabIndex = 4;
-            this.btnChangePoints.Text = "增减积分（正负整数）";
-            this.btnChangePoints.UseVisualStyleBackColor = true;
-            this.btnChangePoints.Click += new System.EventHandler(this.btnChangePoints_Click);
             // 
             // Form1
             // 
@@ -821,7 +821,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "v2013.12.12 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2013.12.20 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();

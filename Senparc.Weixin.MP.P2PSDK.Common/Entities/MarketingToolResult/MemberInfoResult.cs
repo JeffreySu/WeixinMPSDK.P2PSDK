@@ -16,7 +16,7 @@ namespace Senparc.Weixin.MP.P2PSDK.Common.Entities
         /// </summary>
         public string CardNumber { get; set; }
         public string OpenId { get; set; }
-        //public long FakeId { get; set; }
+        public long FakeId { get; set; }
         public DateTime AddTime { get; set; }
         /// <summary>
         /// 当前积分
