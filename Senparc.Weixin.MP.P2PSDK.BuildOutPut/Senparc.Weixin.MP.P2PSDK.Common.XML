@@ -196,6 +196,11 @@
             性别。男：1，女：2
             </summary>
         </member>
+        <member name="T:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.DevInfo">
+            <summary>
+            开发者信息
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendsJsonData">
             <summary>
             输出在页面中的用户Json信息

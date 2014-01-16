@@ -114,44 +114,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 15);
+            this.label1.Size = new System.Drawing.Size(137, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "URL地址（不以/结尾）：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 48);
+            this.label2.Location = new System.Drawing.Point(88, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 15);
+            this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 3;
             this.label2.Text = "AppKey：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(117, 78);
+            this.label3.Location = new System.Drawing.Point(88, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
+            this.label3.Size = new System.Drawing.Size(47, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "Secret:";
             // 
             // txtSecret
             // 
-            this.txtSecret.Location = new System.Drawing.Point(193, 74);
-            this.txtSecret.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSecret.Location = new System.Drawing.Point(145, 59);
+            this.txtSecret.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSecret.Name = "txtSecret";
-            this.txtSecret.Size = new System.Drawing.Size(292, 25);
+            this.txtSecret.Size = new System.Drawing.Size(220, 21);
             this.txtSecret.TabIndex = 4;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(493, 114);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegister.Location = new System.Drawing.Point(370, 91);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(204, 22);
+            this.btnRegister.Size = new System.Drawing.Size(153, 18);
             this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "初始化驻留信息并连接";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -160,17 +163,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(125, 108);
+            this.label4.Location = new System.Drawing.Point(94, 86);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 15);
+            this.label4.Size = new System.Drawing.Size(47, 12);
             this.label4.TabIndex = 7;
             this.label4.Text = "Token：";
             // 
             // lblToken
             // 
-            this.lblToken.Location = new System.Drawing.Point(193, 108);
+            this.lblToken.Location = new System.Drawing.Point(145, 86);
+            this.lblToken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblToken.Name = "lblToken";
-            this.lblToken.Size = new System.Drawing.Size(292, 38);
+            this.lblToken.Size = new System.Drawing.Size(219, 30);
             this.lblToken.TabIndex = 8;
             this.lblToken.Text = "无";
             // 
@@ -181,21 +186,21 @@
             this.gbSendMessage.Controls.Add(this.label6);
             this.gbSendMessage.Controls.Add(this.txtSendMessageFakeid);
             this.gbSendMessage.Controls.Add(this.label5);
-            this.gbSendMessage.Location = new System.Drawing.Point(6, 5);
-            this.gbSendMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbSendMessage.Location = new System.Drawing.Point(4, 4);
+            this.gbSendMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbSendMessage.Name = "gbSendMessage";
-            this.gbSendMessage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbSendMessage.Size = new System.Drawing.Size(437, 96);
+            this.gbSendMessage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessage.Size = new System.Drawing.Size(328, 77);
             this.gbSendMessage.TabIndex = 9;
             this.gbSendMessage.TabStop = false;
             this.gbSendMessage.Text = "单发消息测试";
             // 
             // btnSendMessageSend
             // 
-            this.btnSendMessageSend.Location = new System.Drawing.Point(357, 52);
-            this.btnSendMessageSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendMessageSend.Location = new System.Drawing.Point(268, 42);
+            this.btnSendMessageSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSendMessageSend.Name = "btnSendMessageSend";
-            this.btnSendMessageSend.Size = new System.Drawing.Size(75, 22);
+            this.btnSendMessageSend.Size = new System.Drawing.Size(56, 18);
             this.btnSendMessageSend.TabIndex = 4;
             this.btnSendMessageSend.Text = "发送";
             this.btnSendMessageSend.UseVisualStyleBackColor = true;
@@ -203,97 +208,101 @@
             // 
             // txtSendMessageText
             // 
-            this.txtSendMessageText.Location = new System.Drawing.Point(83, 51);
-            this.txtSendMessageText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendMessageText.Location = new System.Drawing.Point(62, 41);
+            this.txtSendMessageText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendMessageText.Name = "txtSendMessageText";
-            this.txtSendMessageText.Size = new System.Drawing.Size(268, 25);
+            this.txtSendMessageText.Size = new System.Drawing.Size(202, 21);
             this.txtSendMessageText.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 52);
+            this.label6.Location = new System.Drawing.Point(19, 42);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 2;
             this.label6.Text = "消息：";
             // 
             // txtSendMessageFakeid
             // 
-            this.txtSendMessageFakeid.Location = new System.Drawing.Point(83, 22);
-            this.txtSendMessageFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendMessageFakeid.Location = new System.Drawing.Point(62, 18);
+            this.txtSendMessageFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendMessageFakeid.Name = "txtSendMessageFakeid";
-            this.txtSendMessageFakeid.Size = new System.Drawing.Size(120, 25);
+            this.txtSendMessageFakeid.Size = new System.Drawing.Size(91, 21);
             this.txtSendMessageFakeid.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 25);
+            this.label5.Location = new System.Drawing.Point(5, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 15);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 0;
             this.label5.Text = "fakeid：";
             // 
             // txtVerifyCode
             // 
-            this.txtVerifyCode.Location = new System.Drawing.Point(141, 52);
-            this.txtVerifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVerifyCode.Location = new System.Drawing.Point(106, 42);
+            this.txtVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtVerifyCode.Name = "txtVerifyCode";
-            this.txtVerifyCode.Size = new System.Drawing.Size(100, 25);
+            this.txtVerifyCode.Size = new System.Drawing.Size(76, 21);
             this.txtVerifyCode.TabIndex = 6;
             this.txtVerifyCode.Visible = false;
             // 
             // picVerifyCode
             // 
-            this.picVerifyCode.Location = new System.Drawing.Point(5, 25);
-            this.picVerifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picVerifyCode.Location = new System.Drawing.Point(4, 20);
+            this.picVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picVerifyCode.Name = "picVerifyCode";
-            this.picVerifyCode.Size = new System.Drawing.Size(131, 52);
+            this.picVerifyCode.Size = new System.Drawing.Size(98, 42);
             this.picVerifyCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVerifyCode.TabIndex = 5;
             this.picVerifyCode.TabStop = false;
             // 
             // txtSendMessageDescription
             // 
-            this.txtSendMessageDescription.Location = new System.Drawing.Point(379, 51);
-            this.txtSendMessageDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendMessageDescription.Location = new System.Drawing.Point(284, 41);
+            this.txtSendMessageDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendMessageDescription.Name = "txtSendMessageDescription";
-            this.txtSendMessageDescription.Size = new System.Drawing.Size(262, 25);
+            this.txtSendMessageDescription.Size = new System.Drawing.Size(198, 21);
             this.txtSendMessageDescription.TabIndex = 10;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 56);
+            this.label9.Location = new System.Drawing.Point(177, 45);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 15);
+            this.label9.Size = new System.Drawing.Size(113, 12);
             this.label9.TabIndex = 9;
             this.label9.Text = "内容（支持HTML）：";
             // 
             // txtSendMessageTitle
             // 
-            this.txtSendMessageTitle.Location = new System.Drawing.Point(71, 51);
-            this.txtSendMessageTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendMessageTitle.Location = new System.Drawing.Point(53, 41);
+            this.txtSendMessageTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendMessageTitle.Name = "txtSendMessageTitle";
-            this.txtSendMessageTitle.Size = new System.Drawing.Size(159, 25);
+            this.txtSendMessageTitle.Size = new System.Drawing.Size(120, 21);
             this.txtSendMessageTitle.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 56);
+            this.label8.Location = new System.Drawing.Point(10, 45);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 15);
+            this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 7;
             this.label8.Text = "标题：";
             // 
             // btnSendMessageNews
             // 
-            this.btnSendMessageNews.Location = new System.Drawing.Point(651, 54);
-            this.btnSendMessageNews.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendMessageNews.Location = new System.Drawing.Point(488, 43);
+            this.btnSendMessageNews.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSendMessageNews.Name = "btnSendMessageNews";
-            this.btnSendMessageNews.Size = new System.Drawing.Size(75, 22);
+            this.btnSendMessageNews.Size = new System.Drawing.Size(56, 18);
             this.btnSendMessageNews.TabIndex = 6;
             this.btnSendMessageNews.Text = "发送";
             this.btnSendMessageNews.UseVisualStyleBackColor = true;
@@ -302,18 +311,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 26);
+            this.label7.Location = new System.Drawing.Point(5, 21);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 15);
+            this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 5;
             this.label7.Text = "username：";
             // 
             // txtSendMessageUserName
             // 
-            this.txtSendMessageUserName.Location = new System.Drawing.Point(99, 22);
-            this.txtSendMessageUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendMessageUserName.Location = new System.Drawing.Point(74, 18);
+            this.txtSendMessageUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendMessageUserName.Name = "txtSendMessageUserName";
-            this.txtSendMessageUserName.Size = new System.Drawing.Size(120, 25);
+            this.txtSendMessageUserName.Size = new System.Drawing.Size(91, 21);
             this.txtSendMessageUserName.TabIndex = 1;
             // 
             // gbFriends
@@ -327,11 +337,11 @@
             this.gbFriends.Controls.Add(this.btnGetGroupFriends);
             this.gbFriends.Controls.Add(this.cbGroupIds);
             this.gbFriends.Controls.Add(this.btnGetGroupIds);
-            this.gbFriends.Location = new System.Drawing.Point(12, 160);
-            this.gbFriends.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFriends.Location = new System.Drawing.Point(9, 128);
+            this.gbFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFriends.Name = "gbFriends";
-            this.gbFriends.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFriends.Size = new System.Drawing.Size(745, 124);
+            this.gbFriends.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFriends.Size = new System.Drawing.Size(559, 99);
             this.gbFriends.TabIndex = 5;
             this.gbFriends.TabStop = false;
             this.gbFriends.Text = "用户组及用户信息";
@@ -340,17 +350,18 @@
             // lblGroupCnt
             // 
             this.lblGroupCnt.AutoSize = true;
-            this.lblGroupCnt.Location = new System.Drawing.Point(255, 28);
+            this.lblGroupCnt.Location = new System.Drawing.Point(191, 22);
+            this.lblGroupCnt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGroupCnt.Name = "lblGroupCnt";
-            this.lblGroupCnt.Size = new System.Drawing.Size(0, 15);
+            this.lblGroupCnt.Size = new System.Drawing.Size(0, 12);
             this.lblGroupCnt.TabIndex = 8;
             // 
             // picHeaderImage
             // 
-            this.picHeaderImage.Location = new System.Drawing.Point(576, 49);
-            this.picHeaderImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picHeaderImage.Location = new System.Drawing.Point(432, 39);
+            this.picHeaderImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picHeaderImage.Name = "picHeaderImage";
-            this.picHeaderImage.Size = new System.Drawing.Size(68, 68);
+            this.picHeaderImage.Size = new System.Drawing.Size(51, 54);
             this.picHeaderImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHeaderImage.TabIndex = 7;
             this.picHeaderImage.TabStop = false;
@@ -358,19 +369,17 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(359, 28);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(269, 22);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 15);
+            this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 6;
             this.label12.Text = "用户列表：";
             // 
             // btnGetAllFriends
             // 
-            this.btnGetAllFriends.Location = new System.Drawing.Point(12, 95);
-            this.btnGetAllFriends.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGetAllFriends.Location = new System.Drawing.Point(9, 76);
             this.btnGetAllFriends.Name = "btnGetAllFriends";
-            this.btnGetAllFriends.Size = new System.Drawing.Size(380, 22);
+            this.btnGetAllFriends.Size = new System.Drawing.Size(285, 18);
             this.btnGetAllFriends.TabIndex = 5;
             this.btnGetAllFriends.Text = "获取前1000位用户（从“未分组”开始依次搜索）";
             this.btnGetAllFriends.UseVisualStyleBackColor = true;
@@ -379,10 +388,10 @@
             // 
             // btnGetFriendDetails
             // 
-            this.btnGetFriendDetails.Location = new System.Drawing.Point(576, 21);
-            this.btnGetFriendDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGetFriendDetails.Location = new System.Drawing.Point(432, 17);
+            this.btnGetFriendDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGetFriendDetails.Name = "btnGetFriendDetails";
-            this.btnGetFriendDetails.Size = new System.Drawing.Size(163, 22);
+            this.btnGetFriendDetails.Size = new System.Drawing.Size(122, 18);
             this.btnGetFriendDetails.TabIndex = 4;
             this.btnGetFriendDetails.Text = "获取详情&&下载头像";
             this.btnGetFriendDetails.UseVisualStyleBackColor = true;
@@ -392,20 +401,20 @@
             // cbFriendsList
             // 
             this.cbFriendsList.FormattingEnabled = true;
-            this.cbFriendsList.Location = new System.Drawing.Point(448, 22);
-            this.cbFriendsList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbFriendsList.Location = new System.Drawing.Point(336, 18);
+            this.cbFriendsList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbFriendsList.Name = "cbFriendsList";
-            this.cbFriendsList.Size = new System.Drawing.Size(121, 23);
+            this.cbFriendsList.Size = new System.Drawing.Size(92, 20);
             this.cbFriendsList.TabIndex = 3;
             this.cbFriendsList.Visible = false;
             this.cbFriendsList.SelectedValueChanged += new System.EventHandler(this.cbFriendsList_SelectedValueChanged);
             // 
             // btnGetGroupFriends
             // 
-            this.btnGetGroupFriends.Location = new System.Drawing.Point(13, 66);
-            this.btnGetGroupFriends.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGetGroupFriends.Location = new System.Drawing.Point(10, 53);
+            this.btnGetGroupFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGetGroupFriends.Name = "btnGetGroupFriends";
-            this.btnGetGroupFriends.Size = new System.Drawing.Size(173, 22);
+            this.btnGetGroupFriends.Size = new System.Drawing.Size(130, 18);
             this.btnGetGroupFriends.TabIndex = 2;
             this.btnGetGroupFriends.Text = "获取此组前50位用户";
             this.btnGetGroupFriends.UseVisualStyleBackColor = true;
@@ -415,19 +424,19 @@
             // cbGroupIds
             // 
             this.cbGroupIds.FormattingEnabled = true;
-            this.cbGroupIds.Location = new System.Drawing.Point(128, 25);
-            this.cbGroupIds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbGroupIds.Location = new System.Drawing.Point(96, 20);
+            this.cbGroupIds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbGroupIds.Name = "cbGroupIds";
-            this.cbGroupIds.Size = new System.Drawing.Size(121, 23);
+            this.cbGroupIds.Size = new System.Drawing.Size(92, 20);
             this.cbGroupIds.TabIndex = 1;
             this.cbGroupIds.SelectedIndexChanged += new System.EventHandler(this.cbGroupIds_SelectedIndexChanged);
             // 
             // btnGetGroupIds
             // 
-            this.btnGetGroupIds.Location = new System.Drawing.Point(11, 24);
-            this.btnGetGroupIds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGetGroupIds.Location = new System.Drawing.Point(8, 19);
+            this.btnGetGroupIds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGetGroupIds.Name = "btnGetGroupIds";
-            this.btnGetGroupIds.Size = new System.Drawing.Size(112, 22);
+            this.btnGetGroupIds.Size = new System.Drawing.Size(84, 18);
             this.btnGetGroupIds.TabIndex = 0;
             this.btnGetGroupIds.Text = "获取用户组";
             this.btnGetGroupIds.UseVisualStyleBackColor = true;
@@ -446,11 +455,11 @@
             this.gbSendMessageNews.Controls.Add(this.txtSendMessageTitle);
             this.gbSendMessageNews.Controls.Add(this.label7);
             this.gbSendMessageNews.Controls.Add(this.label8);
-            this.gbSendMessageNews.Location = new System.Drawing.Point(6, 105);
-            this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbSendMessageNews.Location = new System.Drawing.Point(4, 84);
+            this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbSendMessageNews.Name = "gbSendMessageNews";
-            this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbSendMessageNews.Size = new System.Drawing.Size(743, 86);
+            this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessageNews.Size = new System.Drawing.Size(557, 69);
             this.gbSendMessageNews.TabIndex = 10;
             this.gbSendMessageNews.TabStop = false;
             this.gbSendMessageNews.Text = "图文消息测试";
@@ -458,43 +467,46 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(428, 26);
+            this.label18.Location = new System.Drawing.Point(321, 21);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(86, 15);
+            this.label18.Size = new System.Drawing.Size(65, 12);
             this.label18.TabIndex = 11;
             this.label18.Text = "AppMsgId：";
             // 
             // txtNewsAppMsgId
             // 
-            this.txtNewsAppMsgId.Location = new System.Drawing.Point(517, 22);
-            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewsAppMsgId.Location = new System.Drawing.Point(388, 18);
+            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewsAppMsgId.Name = "txtNewsAppMsgId";
-            this.txtNewsAppMsgId.Size = new System.Drawing.Size(120, 25);
+            this.txtNewsAppMsgId.Size = new System.Drawing.Size(91, 21);
             this.txtNewsAppMsgId.TabIndex = 1;
             // 
             // txtSendNewsMessageFakeid
             // 
-            this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(302, 22);
-            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(226, 18);
+            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSendNewsMessageFakeid.Name = "txtSendNewsMessageFakeid";
-            this.txtSendNewsMessageFakeid.Size = new System.Drawing.Size(120, 25);
+            this.txtSendNewsMessageFakeid.Size = new System.Drawing.Size(91, 21);
             this.txtSendNewsMessageFakeid.TabIndex = 1;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(226, 26);
+            this.label17.Location = new System.Drawing.Point(170, 21);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 15);
+            this.label17.Size = new System.Drawing.Size(53, 12);
             this.label17.TabIndex = 5;
             this.label17.Text = "fakeid：";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(328, 532);
+            this.label13.Location = new System.Drawing.Point(246, 426);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(420, 15);
+            this.label13.Size = new System.Drawing.Size(335, 12);
             this.label13.TabIndex = 12;
             this.label13.Text = "苏州盛派网络科技有限公司 版权所有。内测使用，严禁传播。";
             // 
@@ -503,11 +515,11 @@
             this.gbVerifyCode.Controls.Add(this.label14);
             this.gbVerifyCode.Controls.Add(this.picVerifyCode);
             this.gbVerifyCode.Controls.Add(this.txtVerifyCode);
-            this.gbVerifyCode.Location = new System.Drawing.Point(451, 5);
-            this.gbVerifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbVerifyCode.Location = new System.Drawing.Point(338, 4);
+            this.gbVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbVerifyCode.Name = "gbVerifyCode";
-            this.gbVerifyCode.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbVerifyCode.Size = new System.Drawing.Size(299, 96);
+            this.gbVerifyCode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbVerifyCode.Size = new System.Drawing.Size(224, 77);
             this.gbVerifyCode.TabIndex = 13;
             this.gbVerifyCode.TabStop = false;
             this.gbVerifyCode.Text = "验证码";
@@ -515,18 +527,18 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(141, 18);
+            this.label14.Location = new System.Drawing.Point(106, 14);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 30);
+            this.label14.Size = new System.Drawing.Size(125, 24);
             this.label14.TabIndex = 7;
             this.label14.Text = "左侧出现图片时，\r\n将验证码填写在这里：";
             // 
             // btnSwitch
             // 
-            this.btnSwitch.Location = new System.Drawing.Point(493, 12);
-            this.btnSwitch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSwitch.Location = new System.Drawing.Point(370, 10);
             this.btnSwitch.Name = "btnSwitch";
-            this.btnSwitch.Size = new System.Drawing.Size(163, 22);
+            this.btnSwitch.Size = new System.Drawing.Size(122, 18);
             this.btnSwitch.TabIndex = 15;
             this.btnSwitch.Text = "切换本地/远程地址";
             this.btnSwitch.UseVisualStyleBackColor = true;
@@ -534,10 +546,9 @@
             // 
             // btnTestWrongApi
             // 
-            this.btnTestWrongApi.Location = new System.Drawing.Point(13, 132);
-            this.btnTestWrongApi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTestWrongApi.Location = new System.Drawing.Point(10, 106);
             this.btnTestWrongApi.Name = "btnTestWrongApi";
-            this.btnTestWrongApi.Size = new System.Drawing.Size(163, 22);
+            this.btnTestWrongApi.Size = new System.Drawing.Size(122, 18);
             this.btnTestWrongApi.TabIndex = 16;
             this.btnTestWrongApi.Text = "测试API地址错误";
             this.btnTestWrongApi.UseVisualStyleBackColor = true;
@@ -546,28 +557,30 @@
             // 
             // lblAppKeyNotice
             // 
-            this.lblAppKeyNotice.Location = new System.Drawing.Point(493, 42);
+            this.lblAppKeyNotice.Location = new System.Drawing.Point(370, 34);
+            this.lblAppKeyNotice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAppKeyNotice.Name = "lblAppKeyNotice";
-            this.lblAppKeyNotice.Size = new System.Drawing.Size(282, 70);
+            this.lblAppKeyNotice.Size = new System.Drawing.Size(212, 56);
             this.lblAppKeyNotice.TabIndex = 17;
             this.lblAppKeyNotice.Text = "<--凡是链接成功之后的AppKey可以任意切换，不用重新修改密码或重新链接。Passport会被自动缓存，不会重新获取。可观察各自Token。";
             this.lblAppKeyNotice.Visible = false;
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(193, 10);
-            this.txtUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUrl.Location = new System.Drawing.Point(145, 8);
+            this.txtUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(292, 25);
+            this.txtUrl.Size = new System.Drawing.Size(220, 21);
             this.txtUrl.TabIndex = 1;
             this.txtUrl.Text = "http://api.souidea.com:8282";
             // 
             // txtAppKey
             // 
             this.txtAppKey.FormattingEnabled = true;
-            this.txtAppKey.Location = new System.Drawing.Point(193, 42);
+            this.txtAppKey.Location = new System.Drawing.Point(145, 34);
+            this.txtAppKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAppKey.Name = "txtAppKey";
-            this.txtAppKey.Size = new System.Drawing.Size(292, 23);
+            this.txtAppKey.Size = new System.Drawing.Size(220, 20);
             this.txtAppKey.TabIndex = 18;
             // 
             // tab
@@ -576,10 +589,11 @@
             this.tab.Controls.Add(this.tabPage3);
             this.tab.Controls.Add(this.tabPage4);
             this.tab.Controls.Add(this.tabPage2);
-            this.tab.Location = new System.Drawing.Point(12, 289);
+            this.tab.Location = new System.Drawing.Point(9, 231);
+            this.tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(775, 240);
+            this.tab.Size = new System.Drawing.Size(581, 192);
             this.tab.TabIndex = 19;
             this.tab.Visible = false;
             // 
@@ -588,10 +602,11 @@
             this.tabPage1.Controls.Add(this.gbSendMessage);
             this.tabPage1.Controls.Add(this.gbSendMessageNews);
             this.tabPage1.Controls.Add(this.gbVerifyCode);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(767, 211);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(573, 166);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "消息发送";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -599,9 +614,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.gbFakeidBind);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(767, 211);
+            this.tabPage3.Size = new System.Drawing.Size(573, 166);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "OpenId-FakeId绑定";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -612,11 +628,11 @@
             this.gbFakeidBind.Controls.Add(this.btnFakeIdBind);
             this.gbFakeidBind.Controls.Add(this.txtFakeidBindFakeid);
             this.gbFakeidBind.Controls.Add(this.label10);
-            this.gbFakeidBind.Location = new System.Drawing.Point(8, 2);
-            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbFakeidBind.Location = new System.Drawing.Point(6, 2);
+            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFakeidBind.Name = "gbFakeidBind";
-            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbFakeidBind.Size = new System.Drawing.Size(743, 66);
+            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFakeidBind.Size = new System.Drawing.Size(557, 53);
             this.gbFakeidBind.TabIndex = 12;
             this.gbFakeidBind.TabStop = false;
             this.gbFakeidBind.Text = "Fakeid-Openid自动匹配";
@@ -624,45 +640,49 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(308, 30);
+            this.label11.Location = new System.Drawing.Point(231, 24);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(358, 15);
+            this.label11.Size = new System.Drawing.Size(281, 12);
             this.label11.TabIndex = 3;
             this.label11.Text = "注意：请先确保P2P后台的P2PBridge已经完成设置。";
             // 
             // btnFakeIdBind
             // 
-            this.btnFakeIdBind.Location = new System.Drawing.Point(192, 26);
-            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFakeIdBind.Location = new System.Drawing.Point(144, 21);
+            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFakeIdBind.Name = "btnFakeIdBind";
-            this.btnFakeIdBind.Size = new System.Drawing.Size(109, 22);
+            this.btnFakeIdBind.Size = new System.Drawing.Size(82, 18);
             this.btnFakeIdBind.TabIndex = 2;
             this.btnFakeIdBind.Text = "模拟测试";
             this.btnFakeIdBind.UseVisualStyleBackColor = true;
+            this.btnFakeIdBind.Click += new System.EventHandler(this.btnFakeIdBind_Click);
             // 
             // txtFakeidBindFakeid
             // 
-            this.txtFakeidBindFakeid.Location = new System.Drawing.Point(71, 24);
-            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFakeidBindFakeid.Location = new System.Drawing.Point(53, 19);
+            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFakeidBindFakeid.Name = "txtFakeidBindFakeid";
-            this.txtFakeidBindFakeid.Size = new System.Drawing.Size(115, 25);
+            this.txtFakeidBindFakeid.Size = new System.Drawing.Size(87, 21);
             this.txtFakeidBindFakeid.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 28);
+            this.label10.Location = new System.Drawing.Point(4, 22);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 15);
+            this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 0;
             this.label10.Text = "fakeid：";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.gbMedia);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(767, 211);
+            this.tabPage4.Size = new System.Drawing.Size(573, 166);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "媒体文件下载";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -673,11 +693,9 @@
             this.gbMedia.Controls.Add(this.btnGetVoice);
             this.gbMedia.Controls.Add(this.txtMediaFakeid);
             this.gbMedia.Controls.Add(this.label15);
-            this.gbMedia.Location = new System.Drawing.Point(4, 4);
-            this.gbMedia.Margin = new System.Windows.Forms.Padding(4);
+            this.gbMedia.Location = new System.Drawing.Point(3, 3);
             this.gbMedia.Name = "gbMedia";
-            this.gbMedia.Padding = new System.Windows.Forms.Padding(4);
-            this.gbMedia.Size = new System.Drawing.Size(744, 61);
+            this.gbMedia.Size = new System.Drawing.Size(558, 49);
             this.gbMedia.TabIndex = 15;
             this.gbMedia.TabStop = false;
             this.gbMedia.Text = "音频文件";
@@ -685,37 +703,37 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(339, 29);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(254, 23);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(310, 15);
+            this.label16.Size = new System.Drawing.Size(245, 12);
             this.label16.TabIndex = 5;
             this.label16.Text = "如果fakeid留空，则从全局消息中获取第一个";
             // 
             // btnGetVoice
             // 
-            this.btnGetVoice.Location = new System.Drawing.Point(193, 25);
-            this.btnGetVoice.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGetVoice.Location = new System.Drawing.Point(145, 20);
             this.btnGetVoice.Name = "btnGetVoice";
-            this.btnGetVoice.Size = new System.Drawing.Size(137, 22);
+            this.btnGetVoice.Size = new System.Drawing.Size(103, 18);
             this.btnGetVoice.TabIndex = 4;
             this.btnGetVoice.Text = "下载音频文件";
             this.btnGetVoice.UseVisualStyleBackColor = true;
+            this.btnGetVoice.Click += new System.EventHandler(this.btnGetVoice_Click);
             // 
             // txtMediaFakeid
             // 
-            this.txtMediaFakeid.Location = new System.Drawing.Point(71, 25);
-            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMediaFakeid.Location = new System.Drawing.Point(53, 20);
+            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMediaFakeid.Name = "txtMediaFakeid";
-            this.txtMediaFakeid.Size = new System.Drawing.Size(115, 25);
+            this.txtMediaFakeid.Size = new System.Drawing.Size(87, 21);
             this.txtMediaFakeid.TabIndex = 3;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 29);
+            this.label15.Location = new System.Drawing.Point(4, 23);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 15);
+            this.label15.Size = new System.Drawing.Size(53, 12);
             this.label15.TabIndex = 2;
             this.label15.Text = "fakeid：";
             // 
@@ -723,10 +741,11 @@
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(767, 211);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(573, 166);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "微信营销工具接口";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -738,18 +757,21 @@
             this.groupBox1.Controls.Add(this.btnMember_GetMemberinfo);
             this.groupBox1.Controls.Add(this.txtOpenId);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Location = new System.Drawing.Point(3, 36);
+            this.groupBox1.Location = new System.Drawing.Point(2, 29);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(756, 94);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(567, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "会员";
             // 
             // btnChangePoints
             // 
-            this.btnChangePoints.Location = new System.Drawing.Point(524, 16);
+            this.btnChangePoints.Location = new System.Drawing.Point(393, 13);
+            this.btnChangePoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangePoints.Name = "btnChangePoints";
-            this.btnChangePoints.Size = new System.Drawing.Size(174, 23);
+            this.btnChangePoints.Size = new System.Drawing.Size(130, 18);
             this.btnChangePoints.TabIndex = 4;
             this.btnChangePoints.Text = "增减积分（正负整数）";
             this.btnChangePoints.UseVisualStyleBackColor = true;
@@ -757,17 +779,19 @@
             // 
             // txtChangePoints
             // 
-            this.txtChangePoints.Location = new System.Drawing.Point(452, 14);
+            this.txtChangePoints.Location = new System.Drawing.Point(339, 11);
+            this.txtChangePoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtChangePoints.Name = "txtChangePoints";
-            this.txtChangePoints.Size = new System.Drawing.Size(65, 25);
+            this.txtChangePoints.Size = new System.Drawing.Size(50, 21);
             this.txtChangePoints.TabIndex = 3;
             this.txtChangePoints.Text = "0";
             // 
             // btnMember_GetMemberinfo
             // 
-            this.btnMember_GetMemberinfo.Location = new System.Drawing.Point(331, 15);
+            this.btnMember_GetMemberinfo.Location = new System.Drawing.Point(248, 12);
+            this.btnMember_GetMemberinfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMember_GetMemberinfo.Name = "btnMember_GetMemberinfo";
-            this.btnMember_GetMemberinfo.Size = new System.Drawing.Size(115, 23);
+            this.btnMember_GetMemberinfo.Size = new System.Drawing.Size(86, 18);
             this.btnMember_GetMemberinfo.TabIndex = 2;
             this.btnMember_GetMemberinfo.Text = "获取会员信息";
             this.btnMember_GetMemberinfo.UseVisualStyleBackColor = true;
@@ -775,35 +799,38 @@
             // 
             // txtOpenId
             // 
-            this.txtOpenId.Location = new System.Drawing.Point(63, 14);
+            this.txtOpenId.Location = new System.Drawing.Point(47, 11);
+            this.txtOpenId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOpenId.Name = "txtOpenId";
-            this.txtOpenId.Size = new System.Drawing.Size(262, 25);
+            this.txtOpenId.Size = new System.Drawing.Size(198, 21);
             this.txtOpenId.TabIndex = 1;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(3, 17);
+            this.label20.Location = new System.Drawing.Point(2, 14);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 15);
+            this.label20.Size = new System.Drawing.Size(41, 12);
             this.label20.TabIndex = 0;
             this.label20.Text = "OpenId";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 3);
+            this.label19.Location = new System.Drawing.Point(4, 2);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(747, 30);
+            this.label19.Size = new System.Drawing.Size(587, 24);
             this.label19.TabIndex = 0;
             this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后\r\n在www.souidea.com后台" +
     "针对指定的微信应用账号开通“微信营销工具”之后，才能使用。";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 553);
+            this.ClientSize = new System.Drawing.Size(578, 442);
             this.Controls.Add(this.gbFriends);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.txtAppKey);
@@ -819,9 +846,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "v2013.12.20 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2014.01.15 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
