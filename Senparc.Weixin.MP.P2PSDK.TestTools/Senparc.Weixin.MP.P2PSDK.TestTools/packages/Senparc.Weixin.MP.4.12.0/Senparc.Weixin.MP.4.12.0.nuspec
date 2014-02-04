@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Senparc.Weixin.MP</id>
-    <version>4.8.1</version>
+    <version>4.12.0</version>
     <title>Senparc.Weixin.MP.dll</title>
     <authors>苏震巍</authors>
     <owners>苏震巍</owners>
@@ -12,7 +12,26 @@
     <description>微信公众账号SDK：Senparc.Weixin.MP.dll
 开源项目：
 https://github.com/JeffreySu/WeiXinMPSDK</description>
-    <releaseNotes>丰富了JSON通讯的消息返回类型</releaseNotes>
+    <releaseNotes>v4.9 
+丰富了JSON通讯的消息返回类型
+
+修复MessageAgent状态记录的一个bug
+
+修复二维码事件bug
+
+24小时推送限制改为48小时
+
+v4.10
+添加媒体文件上传、下载接口
+
+v4.11
+添加AccessTokenContainer管理容器
+
+v.4.12
+添加更多AccessTokenContainer下的方法</releaseNotes>
     <copyright>Senparc</copyright>
+    <references>
+      <reference file="Senparc.Weixin.MP.dll" />
+    </references>
   </metadata>
 </package>

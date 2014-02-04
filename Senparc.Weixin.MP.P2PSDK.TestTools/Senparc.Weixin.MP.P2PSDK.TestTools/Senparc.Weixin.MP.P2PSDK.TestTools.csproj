@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Senparc.Weixin.MP, Version=4.8.1.39859, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Senparc.Weixin.MP, Version=4.12.0.36922, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Senparc.Weixin.MP.4.8.1\lib\net35\Senparc.Weixin.MP.dll</HintPath>
+      <HintPath>packages\Senparc.Weixin.MP.4.12.0\lib\net35\Senparc.Weixin.MP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -95,6 +95,13 @@
             this.txtOpenId = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtGetSingleMessageFakeId = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.gbGetSingleMessage = new System.Windows.Forms.GroupBox();
+            this.btnGetSingleMessages = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGetAllMessages = new System.Windows.Forms.Button();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
@@ -109,6 +116,9 @@
             this.gbMedia.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.gbGetSingleMessage.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -144,7 +154,7 @@
             // txtSecret
             // 
             this.txtSecret.Location = new System.Drawing.Point(145, 59);
-            this.txtSecret.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSecret.Margin = new System.Windows.Forms.Padding(2);
             this.txtSecret.Name = "txtSecret";
             this.txtSecret.Size = new System.Drawing.Size(220, 21);
             this.txtSecret.TabIndex = 4;
@@ -152,7 +162,7 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(370, 91);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(153, 18);
             this.btnRegister.TabIndex = 6;
@@ -187,9 +197,9 @@
             this.gbSendMessage.Controls.Add(this.txtSendMessageFakeid);
             this.gbSendMessage.Controls.Add(this.label5);
             this.gbSendMessage.Location = new System.Drawing.Point(4, 4);
-            this.gbSendMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessage.Margin = new System.Windows.Forms.Padding(2);
             this.gbSendMessage.Name = "gbSendMessage";
-            this.gbSendMessage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessage.Padding = new System.Windows.Forms.Padding(2);
             this.gbSendMessage.Size = new System.Drawing.Size(328, 77);
             this.gbSendMessage.TabIndex = 9;
             this.gbSendMessage.TabStop = false;
@@ -198,7 +208,7 @@
             // btnSendMessageSend
             // 
             this.btnSendMessageSend.Location = new System.Drawing.Point(268, 42);
-            this.btnSendMessageSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSendMessageSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSendMessageSend.Name = "btnSendMessageSend";
             this.btnSendMessageSend.Size = new System.Drawing.Size(56, 18);
             this.btnSendMessageSend.TabIndex = 4;
@@ -209,7 +219,7 @@
             // txtSendMessageText
             // 
             this.txtSendMessageText.Location = new System.Drawing.Point(62, 41);
-            this.txtSendMessageText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendMessageText.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendMessageText.Name = "txtSendMessageText";
             this.txtSendMessageText.Size = new System.Drawing.Size(202, 21);
             this.txtSendMessageText.TabIndex = 3;
@@ -227,7 +237,7 @@
             // txtSendMessageFakeid
             // 
             this.txtSendMessageFakeid.Location = new System.Drawing.Point(62, 18);
-            this.txtSendMessageFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendMessageFakeid.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendMessageFakeid.Name = "txtSendMessageFakeid";
             this.txtSendMessageFakeid.Size = new System.Drawing.Size(91, 21);
             this.txtSendMessageFakeid.TabIndex = 1;
@@ -245,7 +255,7 @@
             // txtVerifyCode
             // 
             this.txtVerifyCode.Location = new System.Drawing.Point(106, 42);
-            this.txtVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVerifyCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyCode.Name = "txtVerifyCode";
             this.txtVerifyCode.Size = new System.Drawing.Size(76, 21);
             this.txtVerifyCode.TabIndex = 6;
@@ -254,7 +264,7 @@
             // picVerifyCode
             // 
             this.picVerifyCode.Location = new System.Drawing.Point(4, 20);
-            this.picVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picVerifyCode.Margin = new System.Windows.Forms.Padding(2);
             this.picVerifyCode.Name = "picVerifyCode";
             this.picVerifyCode.Size = new System.Drawing.Size(98, 42);
             this.picVerifyCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +274,7 @@
             // txtSendMessageDescription
             // 
             this.txtSendMessageDescription.Location = new System.Drawing.Point(284, 41);
-            this.txtSendMessageDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendMessageDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendMessageDescription.Name = "txtSendMessageDescription";
             this.txtSendMessageDescription.Size = new System.Drawing.Size(198, 21);
             this.txtSendMessageDescription.TabIndex = 10;
@@ -282,7 +292,7 @@
             // txtSendMessageTitle
             // 
             this.txtSendMessageTitle.Location = new System.Drawing.Point(53, 41);
-            this.txtSendMessageTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendMessageTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendMessageTitle.Name = "txtSendMessageTitle";
             this.txtSendMessageTitle.Size = new System.Drawing.Size(120, 21);
             this.txtSendMessageTitle.TabIndex = 8;
@@ -300,7 +310,7 @@
             // btnSendMessageNews
             // 
             this.btnSendMessageNews.Location = new System.Drawing.Point(488, 43);
-            this.btnSendMessageNews.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSendMessageNews.Margin = new System.Windows.Forms.Padding(2);
             this.btnSendMessageNews.Name = "btnSendMessageNews";
             this.btnSendMessageNews.Size = new System.Drawing.Size(56, 18);
             this.btnSendMessageNews.TabIndex = 6;
@@ -321,7 +331,7 @@
             // txtSendMessageUserName
             // 
             this.txtSendMessageUserName.Location = new System.Drawing.Point(74, 18);
-            this.txtSendMessageUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendMessageUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendMessageUserName.Name = "txtSendMessageUserName";
             this.txtSendMessageUserName.Size = new System.Drawing.Size(91, 21);
             this.txtSendMessageUserName.TabIndex = 1;
@@ -338,9 +348,9 @@
             this.gbFriends.Controls.Add(this.cbGroupIds);
             this.gbFriends.Controls.Add(this.btnGetGroupIds);
             this.gbFriends.Location = new System.Drawing.Point(9, 128);
-            this.gbFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFriends.Margin = new System.Windows.Forms.Padding(2);
             this.gbFriends.Name = "gbFriends";
-            this.gbFriends.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFriends.Padding = new System.Windows.Forms.Padding(2);
             this.gbFriends.Size = new System.Drawing.Size(559, 99);
             this.gbFriends.TabIndex = 5;
             this.gbFriends.TabStop = false;
@@ -359,7 +369,7 @@
             // picHeaderImage
             // 
             this.picHeaderImage.Location = new System.Drawing.Point(432, 39);
-            this.picHeaderImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHeaderImage.Margin = new System.Windows.Forms.Padding(2);
             this.picHeaderImage.Name = "picHeaderImage";
             this.picHeaderImage.Size = new System.Drawing.Size(51, 54);
             this.picHeaderImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -389,7 +399,7 @@
             // btnGetFriendDetails
             // 
             this.btnGetFriendDetails.Location = new System.Drawing.Point(432, 17);
-            this.btnGetFriendDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGetFriendDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetFriendDetails.Name = "btnGetFriendDetails";
             this.btnGetFriendDetails.Size = new System.Drawing.Size(122, 18);
             this.btnGetFriendDetails.TabIndex = 4;
@@ -402,7 +412,7 @@
             // 
             this.cbFriendsList.FormattingEnabled = true;
             this.cbFriendsList.Location = new System.Drawing.Point(336, 18);
-            this.cbFriendsList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFriendsList.Margin = new System.Windows.Forms.Padding(2);
             this.cbFriendsList.Name = "cbFriendsList";
             this.cbFriendsList.Size = new System.Drawing.Size(92, 20);
             this.cbFriendsList.TabIndex = 3;
@@ -412,7 +422,7 @@
             // btnGetGroupFriends
             // 
             this.btnGetGroupFriends.Location = new System.Drawing.Point(10, 53);
-            this.btnGetGroupFriends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGetGroupFriends.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetGroupFriends.Name = "btnGetGroupFriends";
             this.btnGetGroupFriends.Size = new System.Drawing.Size(130, 18);
             this.btnGetGroupFriends.TabIndex = 2;
@@ -425,7 +435,7 @@
             // 
             this.cbGroupIds.FormattingEnabled = true;
             this.cbGroupIds.Location = new System.Drawing.Point(96, 20);
-            this.cbGroupIds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGroupIds.Margin = new System.Windows.Forms.Padding(2);
             this.cbGroupIds.Name = "cbGroupIds";
             this.cbGroupIds.Size = new System.Drawing.Size(92, 20);
             this.cbGroupIds.TabIndex = 1;
@@ -434,7 +444,7 @@
             // btnGetGroupIds
             // 
             this.btnGetGroupIds.Location = new System.Drawing.Point(8, 19);
-            this.btnGetGroupIds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGetGroupIds.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetGroupIds.Name = "btnGetGroupIds";
             this.btnGetGroupIds.Size = new System.Drawing.Size(84, 18);
             this.btnGetGroupIds.TabIndex = 0;
@@ -456,9 +466,9 @@
             this.gbSendMessageNews.Controls.Add(this.label7);
             this.gbSendMessageNews.Controls.Add(this.label8);
             this.gbSendMessageNews.Location = new System.Drawing.Point(4, 84);
-            this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(2);
             this.gbSendMessageNews.Name = "gbSendMessageNews";
-            this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(2);
             this.gbSendMessageNews.Size = new System.Drawing.Size(557, 69);
             this.gbSendMessageNews.TabIndex = 10;
             this.gbSendMessageNews.TabStop = false;
@@ -477,7 +487,7 @@
             // txtNewsAppMsgId
             // 
             this.txtNewsAppMsgId.Location = new System.Drawing.Point(388, 18);
-            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewsAppMsgId.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewsAppMsgId.Name = "txtNewsAppMsgId";
             this.txtNewsAppMsgId.Size = new System.Drawing.Size(91, 21);
             this.txtNewsAppMsgId.TabIndex = 1;
@@ -485,7 +495,7 @@
             // txtSendNewsMessageFakeid
             // 
             this.txtSendNewsMessageFakeid.Location = new System.Drawing.Point(226, 18);
-            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSendNewsMessageFakeid.Margin = new System.Windows.Forms.Padding(2);
             this.txtSendNewsMessageFakeid.Name = "txtSendNewsMessageFakeid";
             this.txtSendNewsMessageFakeid.Size = new System.Drawing.Size(91, 21);
             this.txtSendNewsMessageFakeid.TabIndex = 1;
@@ -516,9 +526,9 @@
             this.gbVerifyCode.Controls.Add(this.picVerifyCode);
             this.gbVerifyCode.Controls.Add(this.txtVerifyCode);
             this.gbVerifyCode.Location = new System.Drawing.Point(338, 4);
-            this.gbVerifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbVerifyCode.Margin = new System.Windows.Forms.Padding(2);
             this.gbVerifyCode.Name = "gbVerifyCode";
-            this.gbVerifyCode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbVerifyCode.Padding = new System.Windows.Forms.Padding(2);
             this.gbVerifyCode.Size = new System.Drawing.Size(224, 77);
             this.gbVerifyCode.TabIndex = 13;
             this.gbVerifyCode.TabStop = false;
@@ -568,7 +578,7 @@
             // txtUrl
             // 
             this.txtUrl.Location = new System.Drawing.Point(145, 8);
-            this.txtUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUrl.Margin = new System.Windows.Forms.Padding(2);
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.Size = new System.Drawing.Size(220, 21);
             this.txtUrl.TabIndex = 1;
@@ -578,7 +588,7 @@
             // 
             this.txtAppKey.FormattingEnabled = true;
             this.txtAppKey.Location = new System.Drawing.Point(145, 34);
-            this.txtAppKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAppKey.Margin = new System.Windows.Forms.Padding(2);
             this.txtAppKey.Name = "txtAppKey";
             this.txtAppKey.Size = new System.Drawing.Size(220, 20);
             this.txtAppKey.TabIndex = 18;
@@ -586,11 +596,12 @@
             // tab
             // 
             this.tab.Controls.Add(this.tabPage1);
+            this.tab.Controls.Add(this.tabPage5);
             this.tab.Controls.Add(this.tabPage3);
             this.tab.Controls.Add(this.tabPage4);
             this.tab.Controls.Add(this.tabPage2);
             this.tab.Location = new System.Drawing.Point(9, 231);
-            this.tab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab.Margin = new System.Windows.Forms.Padding(2);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(581, 192);
@@ -603,9 +614,9 @@
             this.tabPage1.Controls.Add(this.gbSendMessageNews);
             this.tabPage1.Controls.Add(this.gbVerifyCode);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(573, 166);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "消息发送";
@@ -615,7 +626,7 @@
             // 
             this.tabPage3.Controls.Add(this.gbFakeidBind);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(573, 166);
             this.tabPage3.TabIndex = 2;
@@ -629,9 +640,9 @@
             this.gbFakeidBind.Controls.Add(this.txtFakeidBindFakeid);
             this.gbFakeidBind.Controls.Add(this.label10);
             this.gbFakeidBind.Location = new System.Drawing.Point(6, 2);
-            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFakeidBind.Margin = new System.Windows.Forms.Padding(2);
             this.gbFakeidBind.Name = "gbFakeidBind";
-            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFakeidBind.Padding = new System.Windows.Forms.Padding(2);
             this.gbFakeidBind.Size = new System.Drawing.Size(557, 53);
             this.gbFakeidBind.TabIndex = 12;
             this.gbFakeidBind.TabStop = false;
@@ -650,7 +661,7 @@
             // btnFakeIdBind
             // 
             this.btnFakeIdBind.Location = new System.Drawing.Point(144, 21);
-            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFakeIdBind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFakeIdBind.Name = "btnFakeIdBind";
             this.btnFakeIdBind.Size = new System.Drawing.Size(82, 18);
             this.btnFakeIdBind.TabIndex = 2;
@@ -661,7 +672,7 @@
             // txtFakeidBindFakeid
             // 
             this.txtFakeidBindFakeid.Location = new System.Drawing.Point(53, 19);
-            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFakeidBindFakeid.Margin = new System.Windows.Forms.Padding(2);
             this.txtFakeidBindFakeid.Name = "txtFakeidBindFakeid";
             this.txtFakeidBindFakeid.Size = new System.Drawing.Size(87, 21);
             this.txtFakeidBindFakeid.TabIndex = 1;
@@ -680,7 +691,7 @@
             // 
             this.tabPage4.Controls.Add(this.gbMedia);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(573, 166);
             this.tabPage4.TabIndex = 3;
@@ -722,7 +733,7 @@
             // txtMediaFakeid
             // 
             this.txtMediaFakeid.Location = new System.Drawing.Point(53, 20);
-            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMediaFakeid.Margin = new System.Windows.Forms.Padding(2);
             this.txtMediaFakeid.Name = "txtMediaFakeid";
             this.txtMediaFakeid.Size = new System.Drawing.Size(87, 21);
             this.txtMediaFakeid.TabIndex = 3;
@@ -742,9 +753,9 @@
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(573, 166);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "微信营销工具接口";
@@ -758,9 +769,9 @@
             this.groupBox1.Controls.Add(this.txtOpenId);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Location = new System.Drawing.Point(2, 29);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(567, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -769,7 +780,7 @@
             // btnChangePoints
             // 
             this.btnChangePoints.Location = new System.Drawing.Point(393, 13);
-            this.btnChangePoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangePoints.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePoints.Name = "btnChangePoints";
             this.btnChangePoints.Size = new System.Drawing.Size(130, 18);
             this.btnChangePoints.TabIndex = 4;
@@ -780,7 +791,7 @@
             // txtChangePoints
             // 
             this.txtChangePoints.Location = new System.Drawing.Point(339, 11);
-            this.txtChangePoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChangePoints.Margin = new System.Windows.Forms.Padding(2);
             this.txtChangePoints.Name = "txtChangePoints";
             this.txtChangePoints.Size = new System.Drawing.Size(50, 21);
             this.txtChangePoints.TabIndex = 3;
@@ -789,7 +800,7 @@
             // btnMember_GetMemberinfo
             // 
             this.btnMember_GetMemberinfo.Location = new System.Drawing.Point(248, 12);
-            this.btnMember_GetMemberinfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMember_GetMemberinfo.Margin = new System.Windows.Forms.Padding(2);
             this.btnMember_GetMemberinfo.Name = "btnMember_GetMemberinfo";
             this.btnMember_GetMemberinfo.Size = new System.Drawing.Size(86, 18);
             this.btnMember_GetMemberinfo.TabIndex = 2;
@@ -800,7 +811,7 @@
             // txtOpenId
             // 
             this.txtOpenId.Location = new System.Drawing.Point(47, 11);
-            this.txtOpenId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOpenId.Margin = new System.Windows.Forms.Padding(2);
             this.txtOpenId.Name = "txtOpenId";
             this.txtOpenId.Size = new System.Drawing.Size(198, 21);
             this.txtOpenId.TabIndex = 1;
@@ -826,6 +837,77 @@
             this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后\r\n在www.souidea.com后台" +
     "针对指定的微信应用账号开通“微信营销工具”之后，才能使用。";
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox2);
+            this.tabPage5.Controls.Add(this.gbGetSingleMessage);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(573, 166);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "消息获取";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txtGetSingleMessageFakeId
+            // 
+            this.txtGetSingleMessageFakeId.Location = new System.Drawing.Point(62, 21);
+            this.txtGetSingleMessageFakeId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGetSingleMessageFakeId.Name = "txtGetSingleMessageFakeId";
+            this.txtGetSingleMessageFakeId.Size = new System.Drawing.Size(91, 21);
+            this.txtGetSingleMessageFakeId.TabIndex = 3;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 23);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 12);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "fakeid：";
+            // 
+            // gbGetSingleMessage
+            // 
+            this.gbGetSingleMessage.Controls.Add(this.btnGetSingleMessages);
+            this.gbGetSingleMessage.Controls.Add(this.txtGetSingleMessageFakeId);
+            this.gbGetSingleMessage.Controls.Add(this.label21);
+            this.gbGetSingleMessage.Location = new System.Drawing.Point(6, 3);
+            this.gbGetSingleMessage.Name = "gbGetSingleMessage";
+            this.gbGetSingleMessage.Size = new System.Drawing.Size(549, 53);
+            this.gbGetSingleMessage.TabIndex = 4;
+            this.gbGetSingleMessage.TabStop = false;
+            this.gbGetSingleMessage.Text = "获取指定用户的对话消息";
+            // 
+            // btnGetSingleMessages
+            // 
+            this.btnGetSingleMessages.Location = new System.Drawing.Point(158, 19);
+            this.btnGetSingleMessages.Name = "btnGetSingleMessages";
+            this.btnGetSingleMessages.Size = new System.Drawing.Size(75, 23);
+            this.btnGetSingleMessages.TabIndex = 4;
+            this.btnGetSingleMessages.Text = "获取";
+            this.btnGetSingleMessages.UseVisualStyleBackColor = true;
+            this.btnGetSingleMessages.Click += new System.EventHandler(this.btnGetSingleMessages_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnGetAllMessages);
+            this.groupBox2.Location = new System.Drawing.Point(3, 62);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(549, 53);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "获取当前所有对话信息";
+            // 
+            // btnGetAllMessages
+            // 
+            this.btnGetAllMessages.Location = new System.Drawing.Point(10, 20);
+            this.btnGetAllMessages.Name = "btnGetAllMessages";
+            this.btnGetAllMessages.Size = new System.Drawing.Size(75, 23);
+            this.btnGetAllMessages.TabIndex = 4;
+            this.btnGetAllMessages.Text = "获取";
+            this.btnGetAllMessages.UseVisualStyleBackColor = true;
+            this.btnGetAllMessages.Click += new System.EventHandler(this.btnGetAllMessages_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -846,9 +928,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "v2014.01.15 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2014.01.19 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
@@ -871,6 +953,10 @@
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.gbGetSingleMessage.ResumeLayout(false);
+            this.gbGetSingleMessage.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -945,6 +1031,13 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnChangePoints;
         private System.Windows.Forms.TextBox txtChangePoints;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.GroupBox gbGetSingleMessage;
+        private System.Windows.Forms.TextBox txtGetSingleMessageFakeId;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnGetSingleMessages;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnGetAllMessages;
     }
 }
 

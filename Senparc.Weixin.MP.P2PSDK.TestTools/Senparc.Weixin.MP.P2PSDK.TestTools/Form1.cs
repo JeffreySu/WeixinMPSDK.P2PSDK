@@ -255,6 +255,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
             txtFakeidBindFakeid.Text = fakeid;
             txtMediaFakeid.Text = fakeid;
             txtSendNewsMessageFakeid.Text = fakeid;
+            txtGetSingleMessageFakeId.Text = fakeid;
         }
 
         private void btnGetFriendDetails_Click(object sender, EventArgs e)
@@ -561,6 +562,23 @@ memberInfo.Phone));
             }
 
             MessageBox.Show(string.Format("修改会员积分成功！当前积分：{0}", memberInfoResult.Data.Points));
+        }
+
+        private void btnGetSingleMessages_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtGetSingleMessageFakeId.Text))
+            {
+                MessageBox.Show("请输入有效的OpenID！");
+                return;
+            }
+
+            MessageBox.Show("即将开放");
+            //GetApiContainer.MessageApi.
+        }
+
+        private void btnGetAllMessages_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("即将开放");
         }
     }
 }
