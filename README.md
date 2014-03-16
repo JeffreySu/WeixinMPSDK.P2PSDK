@@ -3,8 +3,9 @@ WeixinMPSDK.P2PSDK
 
 WeixinMPSDK.P2PSDK 及测试工具源代码
 
-官网地址：http://www.souidea.com
+对接“微微嗨”平台地址：http://www.weiwehihi.com
 
+开发手册：http://www.weiweihi.com/ApiDocuments
 
 --------------
 
