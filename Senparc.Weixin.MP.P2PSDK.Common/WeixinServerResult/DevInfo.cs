@@ -14,5 +14,9 @@ namespace Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult
         public string Token { get; set; }
         public string AppId { get; set; }
         public string AppSecret { get; set; }
+        /// <summary>
+        /// 是否已经开通高级功能
+        /// </summary>
+        public bool HasAdvancedApi { get; set; }
     }
 }

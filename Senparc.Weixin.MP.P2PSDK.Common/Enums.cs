@@ -34,6 +34,10 @@ namespace Senparc.Weixin.MP.P2PSDK.Common
         发送消息失败_引用错误 = -5009,
         发送消息失败_NeedPost = -5010,
         发送消息失败_48小时内用户未互动 = -5011,
+        发送消息失败_未提供FakeId = -5012,
+        发送消息失败_未提供OpenId = -5013,
+        发送消息失败_微微嗨后台未设置开通高级接口 = -5014,
+        发送消息失败_微微嗨后台未设置AppId及Secret = -5015,
 
         P2PBridge错误 = -6000,
         P2PBridge错误_Url未正确设置 = -6001,

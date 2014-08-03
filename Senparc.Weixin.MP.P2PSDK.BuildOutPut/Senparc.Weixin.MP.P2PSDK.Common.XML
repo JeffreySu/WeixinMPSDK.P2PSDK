@@ -201,6 +201,11 @@
             开发者信息
             </summary>
         </member>
+        <member name="P:Senparc.Weixin.MP.P2PSDK.Common.WeixinServerResult.DevInfo.HasAdvancedApi">
+            <summary>
+            是否已经开通高级功能
+            </summary>
+        </member>
         <member name="T:Senparc.Weixin.MP.P2PSDK.Common.FriendsJsonData">
             <summary>
             输出在页面中的用户Json信息

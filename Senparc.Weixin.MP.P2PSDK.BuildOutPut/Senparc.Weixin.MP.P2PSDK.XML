@@ -71,13 +71,15 @@
             <param name="argument">用于推送到P2PBridge的识别参数，可以为ID等参数，不可为空</param>
             <returns></returns>
         </member>
-        <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Int64,System.String,System.String)">
+        <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Int64,System.String,System.String,System.Boolean,System.String)">
             <summary>
             发送简单消息
             </summary>
             <param name="fakeid"></param>
             <param name="text"></param>
             <param name="imgcode"></param>
+            <param name="tryAdvancedApi">优先尝试使用官方高级接口发送，请确定微微嗨后台已经填写微信后台的AppId及Secret，并选中“开通高级接口”选项（http://www.weiweihi.com/User/Yx/Manager/18635?app=18635）</param>
+            <param name="openId">当tryAdvancedApi为true时必须提供</param>
             <returns></returns>
         </member>
         <member name="M:Senparc.Weixin.MP.P2PSDK.MessageApi.SendMessage(System.Int64,System.Int64,System.String)">

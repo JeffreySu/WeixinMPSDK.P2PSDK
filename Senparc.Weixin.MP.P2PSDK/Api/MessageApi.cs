@@ -17,7 +17,7 @@ namespace Senparc.Weixin.MP.P2PSDK
         {
         }
 
-        private SendMessageResult SendMessageFunc(long fakeid, string text = null, long? appMsgId = null, string imgcode = null)
+        private SendMessageResult SendMessageFunc(long fakeid, string text = null, long? appMsgId = null, string imgcode = null, bool tryAdvancedApi = false, string openId = null)
         {
             var url = _passport.P2PUrl + "SendMessage";
             var formData = new Dictionary<string, string>();
@@ -34,6 +34,12 @@ namespace Senparc.Weixin.MP.P2PSDK
             if (!string.IsNullOrEmpty(imgcode))
             {
                 formData["imgcode"] = imgcode;// 输入验证码
+            }
+
+            if (tryAdvancedApi)
+            {
+                formData["tryAdvancedApi"] = "true";
+                formData["openId"] = openId;
             }
 
             var result = HttpUtility.Post.PostGetJson<SendMessageResult>(url, formData: formData);
@@ -71,10 +77,12 @@ namespace Senparc.Weixin.MP.P2PSDK
         /// <param name="fakeid"></param>
         /// <param name="text"></param>
         /// <param name="imgcode"></param>
+        /// <param name="tryAdvancedApi">优先尝试使用官方高级接口发送，请确定微微嗨后台已经填写微信后台的AppId及Secret，并选中“开通高级接口”选项（http://www.weiweihi.com/User/Yx/Manager/18635?app=18635）</param>
+        /// <param name="openId">当tryAdvancedApi为true时必须提供</param>
         /// <returns></returns>
-        public SendMessageResult SendMessage(long fakeid, string text, string imgcode = null)
+        public SendMessageResult SendMessage(long fakeid, string text, string imgcode = null, bool tryAdvancedApi = false, string openId = null)
         {
-            return ApiConnection.Connection(() => SendMessageFunc(fakeid, text, imgcode: imgcode)) as SendMessageResult;
+            return ApiConnection.Connection(() => SendMessageFunc(fakeid, text, null, imgcode, tryAdvancedApi, openId)) as SendMessageResult;
         }
 
         /// <summary>

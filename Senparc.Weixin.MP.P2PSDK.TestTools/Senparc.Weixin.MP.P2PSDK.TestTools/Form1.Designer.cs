@@ -75,6 +75,13 @@
             this.txtAppKey = new System.Windows.Forms.ComboBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGetAllMessages = new System.Windows.Forms.Button();
+            this.gbGetSingleMessage = new System.Windows.Forms.GroupBox();
+            this.btnGetSingleMessages = new System.Windows.Forms.Button();
+            this.txtGetSingleMessageFakeId = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gbFakeidBind = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -95,13 +102,9 @@
             this.txtOpenId = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.txtGetSingleMessageFakeId = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.gbGetSingleMessage = new System.Windows.Forms.GroupBox();
-            this.btnGetSingleMessages = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGetAllMessages = new System.Windows.Forms.Button();
+            this.cbTryAdvancedApi = new System.Windows.Forms.CheckBox();
+            this.txtSendMessageOpenId = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.gbSendMessage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).BeginInit();
             this.gbFriends.SuspendLayout();
@@ -110,15 +113,15 @@
             this.gbVerifyCode.SuspendLayout();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.gbGetSingleMessage.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gbFakeidBind.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.gbMedia.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.gbGetSingleMessage.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -191,6 +194,9 @@
             // 
             // gbSendMessage
             // 
+            this.gbSendMessage.Controls.Add(this.label22);
+            this.gbSendMessage.Controls.Add(this.txtSendMessageOpenId);
+            this.gbSendMessage.Controls.Add(this.cbTryAdvancedApi);
             this.gbSendMessage.Controls.Add(this.btnSendMessageSend);
             this.gbSendMessage.Controls.Add(this.txtSendMessageText);
             this.gbSendMessage.Controls.Add(this.label6);
@@ -200,7 +206,7 @@
             this.gbSendMessage.Margin = new System.Windows.Forms.Padding(2);
             this.gbSendMessage.Name = "gbSendMessage";
             this.gbSendMessage.Padding = new System.Windows.Forms.Padding(2);
-            this.gbSendMessage.Size = new System.Drawing.Size(328, 77);
+            this.gbSendMessage.Size = new System.Drawing.Size(328, 121);
             this.gbSendMessage.TabIndex = 9;
             this.gbSendMessage.TabStop = false;
             this.gbSendMessage.Text = "单发消息测试";
@@ -465,7 +471,7 @@
             this.gbSendMessageNews.Controls.Add(this.txtSendMessageTitle);
             this.gbSendMessageNews.Controls.Add(this.label7);
             this.gbSendMessageNews.Controls.Add(this.label8);
-            this.gbSendMessageNews.Location = new System.Drawing.Point(4, 84);
+            this.gbSendMessageNews.Location = new System.Drawing.Point(6, 129);
             this.gbSendMessageNews.Margin = new System.Windows.Forms.Padding(2);
             this.gbSendMessageNews.Name = "gbSendMessageNews";
             this.gbSendMessageNews.Padding = new System.Windows.Forms.Padding(2);
@@ -513,7 +519,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(246, 426);
+            this.label13.Location = new System.Drawing.Point(247, 458);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(335, 12);
@@ -604,7 +610,7 @@
             this.tab.Margin = new System.Windows.Forms.Padding(2);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(581, 192);
+            this.tab.Size = new System.Drawing.Size(581, 225);
             this.tab.TabIndex = 19;
             this.tab.Visible = false;
             // 
@@ -617,10 +623,81 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(573, 166);
+            this.tabPage1.Size = new System.Drawing.Size(573, 199);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "消息发送";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox2);
+            this.tabPage5.Controls.Add(this.gbGetSingleMessage);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(573, 166);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "消息获取";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnGetAllMessages);
+            this.groupBox2.Location = new System.Drawing.Point(3, 62);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(549, 53);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "获取当前所有对话信息";
+            // 
+            // btnGetAllMessages
+            // 
+            this.btnGetAllMessages.Location = new System.Drawing.Point(10, 20);
+            this.btnGetAllMessages.Name = "btnGetAllMessages";
+            this.btnGetAllMessages.Size = new System.Drawing.Size(75, 23);
+            this.btnGetAllMessages.TabIndex = 4;
+            this.btnGetAllMessages.Text = "获取";
+            this.btnGetAllMessages.UseVisualStyleBackColor = true;
+            this.btnGetAllMessages.Click += new System.EventHandler(this.btnGetAllMessages_Click);
+            // 
+            // gbGetSingleMessage
+            // 
+            this.gbGetSingleMessage.Controls.Add(this.btnGetSingleMessages);
+            this.gbGetSingleMessage.Controls.Add(this.txtGetSingleMessageFakeId);
+            this.gbGetSingleMessage.Controls.Add(this.label21);
+            this.gbGetSingleMessage.Location = new System.Drawing.Point(6, 3);
+            this.gbGetSingleMessage.Name = "gbGetSingleMessage";
+            this.gbGetSingleMessage.Size = new System.Drawing.Size(549, 53);
+            this.gbGetSingleMessage.TabIndex = 4;
+            this.gbGetSingleMessage.TabStop = false;
+            this.gbGetSingleMessage.Text = "获取指定用户的对话消息";
+            // 
+            // btnGetSingleMessages
+            // 
+            this.btnGetSingleMessages.Location = new System.Drawing.Point(158, 19);
+            this.btnGetSingleMessages.Name = "btnGetSingleMessages";
+            this.btnGetSingleMessages.Size = new System.Drawing.Size(75, 23);
+            this.btnGetSingleMessages.TabIndex = 4;
+            this.btnGetSingleMessages.Text = "获取";
+            this.btnGetSingleMessages.UseVisualStyleBackColor = true;
+            this.btnGetSingleMessages.Click += new System.EventHandler(this.btnGetSingleMessages_Click);
+            // 
+            // txtGetSingleMessageFakeId
+            // 
+            this.txtGetSingleMessageFakeId.Location = new System.Drawing.Point(62, 21);
+            this.txtGetSingleMessageFakeId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGetSingleMessageFakeId.Name = "txtGetSingleMessageFakeId";
+            this.txtGetSingleMessageFakeId.Size = new System.Drawing.Size(91, 21);
+            this.txtGetSingleMessageFakeId.TabIndex = 3;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 23);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 12);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "fakeid：";
             // 
             // tabPage3
             // 
@@ -837,82 +914,37 @@
             this.label19.Text = "注意：营销工具所使用的MarketingToolApi是建立在基础Api基础上的高级API，必须先开通使用基础API，然后\r\n在www.souidea.com后台" +
     "针对指定的微信应用账号开通“微信营销工具”之后，才能使用。";
             // 
-            // tabPage5
+            // cbTryAdvancedApi
             // 
-            this.tabPage5.Controls.Add(this.groupBox2);
-            this.tabPage5.Controls.Add(this.gbGetSingleMessage);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(573, 166);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "消息获取";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.cbTryAdvancedApi.AutoSize = true;
+            this.cbTryAdvancedApi.Location = new System.Drawing.Point(7, 74);
+            this.cbTryAdvancedApi.Name = "cbTryAdvancedApi";
+            this.cbTryAdvancedApi.Size = new System.Drawing.Size(252, 16);
+            this.cbTryAdvancedApi.TabIndex = 5;
+            this.cbTryAdvancedApi.Text = "优先使用高级接口（必须指定下方OpenId）";
+            this.cbTryAdvancedApi.UseVisualStyleBackColor = true;
             // 
-            // txtGetSingleMessageFakeId
+            // txtSendMessageOpenId
             // 
-            this.txtGetSingleMessageFakeId.Location = new System.Drawing.Point(62, 21);
-            this.txtGetSingleMessageFakeId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGetSingleMessageFakeId.Name = "txtGetSingleMessageFakeId";
-            this.txtGetSingleMessageFakeId.Size = new System.Drawing.Size(91, 21);
-            this.txtGetSingleMessageFakeId.TabIndex = 3;
+            this.txtSendMessageOpenId.Location = new System.Drawing.Point(62, 93);
+            this.txtSendMessageOpenId.Name = "txtSendMessageOpenId";
+            this.txtSendMessageOpenId.Size = new System.Drawing.Size(193, 21);
+            this.txtSendMessageOpenId.TabIndex = 6;
             // 
-            // label21
+            // label22
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(5, 23);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 12);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "fakeid：";
-            // 
-            // gbGetSingleMessage
-            // 
-            this.gbGetSingleMessage.Controls.Add(this.btnGetSingleMessages);
-            this.gbGetSingleMessage.Controls.Add(this.txtGetSingleMessageFakeId);
-            this.gbGetSingleMessage.Controls.Add(this.label21);
-            this.gbGetSingleMessage.Location = new System.Drawing.Point(6, 3);
-            this.gbGetSingleMessage.Name = "gbGetSingleMessage";
-            this.gbGetSingleMessage.Size = new System.Drawing.Size(549, 53);
-            this.gbGetSingleMessage.TabIndex = 4;
-            this.gbGetSingleMessage.TabStop = false;
-            this.gbGetSingleMessage.Text = "获取指定用户的对话消息";
-            // 
-            // btnGetSingleMessages
-            // 
-            this.btnGetSingleMessages.Location = new System.Drawing.Point(158, 19);
-            this.btnGetSingleMessages.Name = "btnGetSingleMessages";
-            this.btnGetSingleMessages.Size = new System.Drawing.Size(75, 23);
-            this.btnGetSingleMessages.TabIndex = 4;
-            this.btnGetSingleMessages.Text = "获取";
-            this.btnGetSingleMessages.UseVisualStyleBackColor = true;
-            this.btnGetSingleMessages.Click += new System.EventHandler(this.btnGetSingleMessages_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnGetAllMessages);
-            this.groupBox2.Location = new System.Drawing.Point(3, 62);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(549, 53);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "获取当前所有对话信息";
-            // 
-            // btnGetAllMessages
-            // 
-            this.btnGetAllMessages.Location = new System.Drawing.Point(10, 20);
-            this.btnGetAllMessages.Name = "btnGetAllMessages";
-            this.btnGetAllMessages.Size = new System.Drawing.Size(75, 23);
-            this.btnGetAllMessages.TabIndex = 4;
-            this.btnGetAllMessages.Text = "获取";
-            this.btnGetAllMessages.UseVisualStyleBackColor = true;
-            this.btnGetAllMessages.Click += new System.EventHandler(this.btnGetAllMessages_Click);
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 96);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 12);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "OpenId：";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 442);
+            this.ClientSize = new System.Drawing.Size(578, 477);
             this.Controls.Add(this.gbFriends);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.txtAppKey);
@@ -930,7 +962,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "v2014.01.19 - Senparc.Weixin.MP.P2PSDK 测试工具";
+            this.Text = "v2014.05.06 - Senparc.Weixin.MP.P2PSDK 测试工具";
             this.gbSendMessage.ResumeLayout(false);
             this.gbSendMessage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVerifyCode)).EndInit();
@@ -943,6 +975,10 @@
             this.gbVerifyCode.PerformLayout();
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.gbGetSingleMessage.ResumeLayout(false);
+            this.gbGetSingleMessage.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.gbFakeidBind.ResumeLayout(false);
             this.gbFakeidBind.PerformLayout();
@@ -953,10 +989,6 @@
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.gbGetSingleMessage.ResumeLayout(false);
-            this.gbGetSingleMessage.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1038,6 +1070,9 @@
         private System.Windows.Forms.Button btnGetSingleMessages;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnGetAllMessages;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtSendMessageOpenId;
+        private System.Windows.Forms.CheckBox cbTryAdvancedApi;
     }
 }
 

@@ -127,7 +127,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
             long fakeid = 0;
             if (!long.TryParse(txtSendMessageFakeid.Text, out fakeid))
             {
-                MessageBox.Show("Fakeid格式不正确！");
+                MessageBox.Show("Fakeid格式不正确！如果只希望通过高级接口发送，可以输入0。");
                 return;
             }
             if (string.IsNullOrEmpty(txtSendMessageText.Text))
@@ -136,7 +136,7 @@ namespace Senparc.Weixin.MP.P2PSDK.TestTools
                 return;
             }
 
-            var p2pResult = GetApiContainer.MessageApi.SendMessage(fakeid, txtSendMessageText.Text, txtVerifyCode.Text.Length > 0 ? txtVerifyCode.Text : null);
+            var p2pResult = GetApiContainer.MessageApi.SendMessage(fakeid, txtSendMessageText.Text, txtVerifyCode.Text.Length > 0 ? txtVerifyCode.Text : null,cbTryAdvancedApi.Checked,txtSendMessageFakeid.Text);
             if (p2pResult.Result == P2PResultKind.成功)
             {
                 var postMessageResult = p2pResult.Data;
